@@ -1,10 +1,14 @@
 package com.batelectwo;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
@@ -79,7 +83,7 @@ public class Registration extends AppCompatActivity {
         isTimerCompleted = false;
 
         // Create a CountDownTimer for the 5-second timer
-        CountDownTimer dialogTimer = new CountDownTimer(60000, 1000) { // 1 minute (60,000 milliseconds)
+        CountDownTimer dialogTimer = new CountDownTimer(30000, 1000) { // 30 seconds (30,000 milliseconds)
             @Override
             public void onTick(long millisUntilFinished) {
                 // The timer is still running; do nothing
@@ -125,7 +129,7 @@ public class Registration extends AppCompatActivity {
                 final TextView dialogTextViewTimer = dialogView.findViewById(R.id.dialogTextViewTimer);
 
                 // Create a CountDownTimer for the alert dialog
-                CountDownTimer dialogTimer = new CountDownTimer(60000, 1000) { // 1 minute (60,000 milliseconds)
+                CountDownTimer dialogTimer = new CountDownTimer(30000, 1000) { // 30 seconds (30,000 milliseconds)
                     @Override
                     public void onTick(long millisUntilFinished) {
                         // Update the timer in the dialog's TextView
@@ -133,7 +137,20 @@ public class Registration extends AppCompatActivity {
                         // long minutes = secondsRemaining / 60;
                         // long seconds = secondsRemaining % 60;
                         // String timeRemaining = String.format("%d:%02d", minutes, seconds);
-                        dialogTextViewTimer.setText("Time remaining: " + secondsRemaining);
+                        String text = "Time remaining: " + secondsRemaining;
+
+                        SpannableString spannableString = new SpannableString(text);
+
+                        // Set the color for "Time remaining:"
+                        ForegroundColorSpan colorSpan1 = new ForegroundColorSpan(Color.BLUE);
+                        spannableString.setSpan(colorSpan1, 0, 15, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                        // Set the color for the time (secondsRemaining)
+                        ForegroundColorSpan colorSpan2 = new ForegroundColorSpan(Color.RED);
+                        spannableString.setSpan(colorSpan2, 15, text.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                        dialogTextViewTimer.setText(spannableString);
+
                         // Log.d("CountdownTimer", "Time remaining: " + timeRemaining);
                     }
 

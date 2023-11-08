@@ -2,6 +2,7 @@ package com.batelectwo;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -41,8 +42,18 @@ import com.squareup.picasso.Target;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+
+import lecho.lib.hellocharts.model.Axis;
+import lecho.lib.hellocharts.model.AxisValue;
+import lecho.lib.hellocharts.model.Line;
+import lecho.lib.hellocharts.model.LineChartData;
+import lecho.lib.hellocharts.model.PointValue;
+import lecho.lib.hellocharts.model.Viewport;
+import lecho.lib.hellocharts.view.LineChartView;
 
 public class BillActivity extends AppCompatActivity {
 
@@ -65,8 +76,64 @@ public class BillActivity extends AppCompatActivity {
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Bill");
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Find the chart view
+        LineChartView chart = findViewById(R.id.chart);
+
+        // Prepare data for the chart
+        List<Line> lines = new ArrayList<>();
+        List<AxisValue> axisValues = new ArrayList<>();
+        List<PointValue> values = new ArrayList<>();
+        values.add(new PointValue(6, 2));
+        values.add(new PointValue(7, 4));
+        values.add(new PointValue(8, 3));
+        values.add(new PointValue(9, 5));
+        values.add(new PointValue(10, 7));
+        values.add(new PointValue(11, 5));
+        // Add more values as needed
+
+        // Customize the chart data and appearance
+        Line line = new Line(values)
+                .setColor(Color.RED)
+                .setCubic(true);
+        lines.add(line);
+
+        LineChartData data = new LineChartData();
+        data.setLines(lines);
+
+        // Define the X-axis labels
+        axisValues.add(new AxisValue(0).setLabel("Jan"));
+        axisValues.add(new AxisValue(1).setLabel("Feb"));
+        axisValues.add(new AxisValue(2).setLabel("Mar"));
+        axisValues.add(new AxisValue(3).setLabel("Apr"));
+        axisValues.add(new AxisValue(4).setLabel("May"));
+        axisValues.add(new AxisValue(5).setLabel("June"));
+        axisValues.add(new AxisValue(6).setLabel("July"));
+        axisValues.add(new AxisValue(7).setLabel("Aug"));
+        axisValues.add(new AxisValue(8).setLabel("Sept"));
+        axisValues.add(new AxisValue(9).setLabel("Oct"));
+        axisValues.add(new AxisValue(10).setLabel("Nov"));
+        axisValues.add(new AxisValue(11).setLabel("Dec"));
+
+        Axis axisX = new Axis();
+        axisX.setName("Months");
+        axisX.setTextSize(12);
+        axisX.setValues(axisValues);
+
+        Axis axisY = new Axis().setHasLines(true);
+        data.setAxisXBottom(axisX);
+        data.setAxisYLeft(axisY);
+
+        chart.setLineChartData(data);
+
+        // Customize the viewport and other settings
+        Viewport v = new Viewport(chart.getMaximumViewport());
+        v.top = 10; // Set the maximum Y value
+        v.bottom = 0; // Set the minimum Y value
+        chart.setMaximumViewport(v);
+        chart.setCurrentViewport(v);
+
 
         // Get the current date and time
         Date currentDate = new Date();
