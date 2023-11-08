@@ -42,8 +42,6 @@ public class AddConsumer extends AppCompatActivity {
     private FirebaseAuth authProfile;
     private static final String TAG = "AddConsumer";
 
-    // dsadsajdshaj
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
