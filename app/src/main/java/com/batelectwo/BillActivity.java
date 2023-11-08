@@ -58,7 +58,6 @@ public class BillActivity extends AppCompatActivity {
     private Uri uriImage;
     private Bitmap invoiceBitmap;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

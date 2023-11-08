@@ -150,6 +150,7 @@
             android:layout_below="@id/imageViewForReceipt"
             android:background="@android:color/darker_gray" />
 
+
         <!-- ConstraintLayout for SCAN ME and Pay Here -->
 
         <androidx.constraintlayout.widget.ConstraintLayout
