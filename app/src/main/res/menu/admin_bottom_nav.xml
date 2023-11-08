@@ -14,6 +14,10 @@
         android:icon="@drawable/video"
         android:title="Videos"/>
     <item
+        android:id="@+id/send_email_bottom"
+        android:icon="@drawable/send_email"
+        android:title="Send Email"/>
+    <item
         android:id="@+id/profile_bottom"
         android:icon="@drawable/baseline_person_24"
         android:title="Profile"/>

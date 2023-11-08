@@ -176,6 +176,12 @@ public class AdminConsumers extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;
+            } else if (itemId == R.id.send_email_bottom) {
+                Intent intent = new Intent(AdminConsumers.this, AdminSendEmail.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                startActivity(intent);
+                finish();
+                return true;
             } else if (itemId == R.id.profile_bottom) {
                 Intent intent = new Intent(AdminConsumers.this, AdminProfile.class);
                 startActivity(intent);

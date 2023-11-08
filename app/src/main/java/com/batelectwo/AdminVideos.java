@@ -97,6 +97,13 @@ public class AdminVideos extends AppCompatActivity {
                 case R.id.videos_bottom: {
                     return true;
                 }
+                case R.id.send_email_bottom: {
+                    Intent intent = new Intent(AdminVideos.this, AdminSendEmail.class);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    startActivity(intent);
+                    finish();
+                    return true;
+                }
                 case R.id.profile_bottom: {
                     startActivity(new Intent(getApplicationContext(), AdminProfile.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
