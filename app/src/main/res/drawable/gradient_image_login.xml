@@ -1,0 +1,13 @@
+<!-- res/drawable/layered_gradient_with_image.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#FBF6E6"
+                android:endColor="#FCF0B0"
+                android:type="linear"
+                android:angle="45" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/cservice" />
+</layer-list>

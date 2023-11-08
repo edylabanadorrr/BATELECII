@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserTools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <!-- Cable Ties -->
+
+            <ImageView
+                android:id="@+id/imageViewCableTies"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:background="@drawable/cable_ties_updated"/>
+
+            <TextView
+                android:id="@+id/textViewCableTies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:text="Cable Ties"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewCableTiesDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used for organizing and securing wires and cables."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewCableTies"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerCableTies"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewCableTiesDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Circuit Breaker Finder -->
+
+            <ImageView
+                android:id="@+id/imageViewCircuitBreaker"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerCableTies"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circuit_breaker_finder_updated"/>
+
+            <TextView
+                android:id="@+id/textViewCircuitBreaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Circuit Breaker Finder"
+                android:layout_below="@id/dividerCableTies"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewCircuitBreakerDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Locates specific circuit breakers in electrical panels."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewCircuitBreaker"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerCircuitBreaker"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewCircuitBreakerDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Circuit Tester -->
+
+            <ImageView
+                android:id="@+id/imageViewCircuitTester"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerCircuitBreaker"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circuit_tester_updated"/>
+
+            <TextView
+                android:id="@+id/textViewCircuitTester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Circuit Tester"
+                android:layout_below="@id/dividerCircuitBreaker"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewCircuitTesterDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Helps identify live circuits and check for electrical continuity."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewCircuitTester"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerCircuitTester"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewCircuitTesterDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Conduit Bender -->
+
+            <ImageView
+                android:id="@+id/imageViewConduitBender"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerCircuitTester"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/conduit_bender_updated"/>
+
+            <TextView
+                android:id="@+id/textViewConduitBender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Conduit Bender"
+                android:layout_below="@id/dividerCircuitTester"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewConduitBenderDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shapes electrical conduits for routing wires."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewConduitBender"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerConduitBender"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewConduitBenderDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Electrical Gloves and Safety Gear -->
+
+            <ImageView
+                android:id="@+id/imageViewElectricalGloves"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerConduitBender"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/electrical_gloves_updated"/>
+
+            <TextView
+                android:id="@+id/textViewElectricalGloves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Electrical Gloves"
+                android:layout_below="@id/dividerConduitBender"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewElectricalGlovesDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Essential for electrical safety."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewElectricalGloves"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerElectricalGloves"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewElectricalGlovesDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Fish Tape -->
+
+            <ImageView
+                android:id="@+id/imageViewFishTape"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerElectricalGloves"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fish_tape_updated"/>
+
+            <TextView
+                android:id="@+id/textViewFishTape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Fish Tape"
+                android:layout_below="@id/dividerElectricalGloves"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewFishTapeDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Helps route wires through conduits and walls."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewFishTape"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerFishTape"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewFishTapeDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Insulation Resistance Tester -->
+
+            <ImageView
+                android:id="@+id/imageViewInsulation"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerFishTape"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/insulation_resistance_tester_updated"/>
+
+            <TextView
+                android:id="@+id/textViewInsulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Insulation Resistance Tester"
+                android:layout_below="@id/dividerFishTape"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewInsulationDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Measures the insulation resistance of wires and cables."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewInsulation"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerInsulation"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewInsulationDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Multimeter -->
+
+            <ImageView
+                android:id="@+id/imageViewMultimeter"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerInsulation"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/multimeter_updated"/>
+
+            <TextView
+                android:id="@+id/textViewMultimeter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Multimeter"
+                android:layout_below="@id/dividerInsulation"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewMultimeterDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used for measuring voltage, current, and resistance."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewMultimeter"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerMultimeter"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewMultimeterDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Oscilloscope -->
+
+            <ImageView
+                android:id="@+id/imageViewOscilloscope"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerMultimeter"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/oscilloscope_updated"/>
+
+            <TextView
+                android:id="@+id/textViewOscilloscope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Oscilloscope"
+                android:layout_below="@id/dividerMultimeter"
+                android:textSize="12dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewOscilloscopeDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used for analyzing electrical waveforms and signals."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewOscilloscope"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerOscilloscope"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewOscilloscopeDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Pliers -->
+
+            <ImageView
+                android:id="@+id/imageViewPliers"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerOscilloscope"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pliers_updated"/>
+
+            <TextView
+                android:id="@+id/textViewPliers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Pliers"
+                android:layout_below="@id/dividerOscilloscope"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewPliersDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used for gripping, bending, and cutting wires."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewPliers"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerPliers"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewPliersDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Power Drill -->
+
+            <ImageView
+                android:id="@+id/imageViewDrill"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerPliers"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/power_drill_updated"/>
+
+            <TextView
+                android:id="@+id/textViewDrill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Power Drill"
+                android:layout_below="@id/dividerPliers"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewDrillDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Useful for drilling holes and driving screws in electrical installations."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewDrill"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerDrill"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewDrillDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Screwdrivers -->
+
+            <ImageView
+                android:id="@+id/imageViewScrewdriver"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerDrill"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/screwdriver_updated"/>
+
+            <TextView
+                android:id="@+id/textViewScrewdriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Screw Driver"
+                android:layout_below="@id/dividerDrill"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewScrewdriverDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Essential for tightening or loosening screws on electrical components."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewScrewdriver"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerScrewdriver"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewScrewdriverDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Voltage Tester -->
+
+            <ImageView
+                android:id="@+id/imageViewVoltageTester"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerScrewdriver"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/voltage_tester_updated"/>
+
+            <TextView
+                android:id="@+id/textViewVoltageTester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Voltage Tester"
+                android:layout_below="@id/dividerScrewdriver"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewVoltageTesterDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used to check the presence of voltage in electrical circuits."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewVoltageTester"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerVoltageTester"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewVoltageTesterDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Wire Nuts -->
+
+            <ImageView
+                android:id="@+id/imageViewWireNuts"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerVoltageTester"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/wire_nuts_updated"/>
+
+            <TextView
+                android:id="@+id/textViewWireNuts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Wire Nuts"
+                android:layout_below="@id/dividerVoltageTester"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewWireNutsDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used to connect and secure electrical wires."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewWireNuts"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerWireNuts"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewWireNutsDefinition"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Wire Strippers -->
+
+            <ImageView
+                android:id="@+id/imageViewWireStripper"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/dividerWireNuts"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/wire_stripper_updated"/>
+
+            <TextView
+                android:id="@+id/textViewWireStripper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="10dp"
+                android:text="Wire Stripper"
+                android:layout_below="@id/dividerWireNuts"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewWireStripperDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Used to strip insulation from electrical wires."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewWireStripper"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginStart="180dp"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerWireStripper"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewWireStripperDefinition"
+                android:background="@android:color/darker_gray" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

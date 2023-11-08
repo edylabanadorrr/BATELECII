@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserAntiElectricity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <!-- Title -->
+
+        <TextView
+            android:id="@+id/cooperative_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/cooperative_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#a08b15"
+            android:textSize="30sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/light_gray2">
+
+        <TextView
+            android:id="@+id/textViewFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAGNANAKAW NG KURYENTE!"
+            android:textSize="16dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"
+            android:textColor="#ED3F3F"/>
+
+        <TextView
+            android:id="@+id/textViewSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAHIGPIT NA IPINAGBABAWAL!"
+            android:textSize="16dp"
+            android:layout_below="@id/textViewFirst"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"
+            android:textColor="#ED3F3F"/>
+
+        <TextView
+            android:id="@+id/textViewRA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(RA 7832 - Anti-Electricity &amp; Electric Tranmission Lines/Materials Pilferage Act of 1994))"
+            android:layout_below="@id/textViewSecond"
+            android:fontFamily="@font/poppinsbold"
+            android:justificationMode="inter_word"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ang ilegal na paggamit o pagnanakaw ng kuryente ay may mabigat na kaparusahan kagaya ng mga sumusunod:"
+            android:layout_below="@id/textViewRA"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewFirstPenalty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I. Para sa di awtorisadong pagsira ng selyo, paggalaw o pagbubukas ng metro (tampering of electric meter) at paggamit ng anumang koneksiyon upang nakawin ang kuryente."
+            android:layout_below="@id/textViewHead"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewFirstPenaltyToPrisonMayor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* PRISON MAYOR - pagkabilanggo mula 6 na taon at 1 araw hanggang 12 taon"
+            android:layout_below="@id/textViewFirstPenalty"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewFirstPenaltyFine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* MULTA (FINE) - halagang Php 10,000.00 hanggang Php 20,000.00 o magkasamang pataw ng mga naturan."
+            android:layout_below="@id/textViewFirstPenaltyToPrisonMayor"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewFirstPenaltyCoopCharges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* SINGIL NG KOOPERATIBA (Coop Charges)"
+            android:layout_below="@id/textViewFirstPenaltyFine"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium" />
+
+        <TextView
+            android:id="@+id/textViewFirstPenaltyCoopChargesA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="a. Balik-Kwenta (Differential Billing) - hanggang 5 taon ng kaukulang kwenta ng ninakaw na kuryente."
+            android:layout_below="@id/textViewFirstPenaltyCoopCharges"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewFirstPenaltyCoopChargesB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="b. Dagdag Singil (Surcharge) - hanggang 100% batay sa kasalukuyang buwanang konsumo ng kuryente."
+            android:layout_below="@id/textViewFirstPenaltyCoopChargesA"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewSecondPenalty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="II. Para sa pagnanakaw ng mga kawad/materyales ng kuryente (Electric Power Transmission lines/materials)"
+            android:layout_below="@id/textViewFirstPenaltyCoopChargesB"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewReclusionTemporal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* RECLUSION TEMPORAL - pagkabilanggo mula 12 na taon at 1 araw hanggang 20 taon."
+            android:layout_below="@id/textViewSecondPenalty"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewSecondPenaltyFine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* MULTA - halagang mula Php 50,000.00 hanggang Php 100,000.00 o magkasamang pataw ng mga naturan."
+            android:layout_below="@id/textViewReclusionTemporal"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAGSUMBONG AT MAGKAMIT NG KAUKULANG PABUYA!"
+            android:layout_below="@id/textViewSecondPenaltyFine"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"
+            android:textColor="#ED3F3F"/>
+
+        <TextView
+            android:id="@+id/textViewSecondFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ang sino mang makapagsusumbong sa ilegal na paggamit ng kuryente ay magkakaroon ng pabuya (matapos mahuli at mapatunayang nangdaraya) mula sa ating Kooperatiba. Ito ay walang makakaalam o magiging *Stricly Confidentail.* Ipagbigay alam sa pinakamalapit na Tanggapan ng BATELEC II o sa mga Tel. Nos. (043) 756-1424/ 756-6337/ 756-1021/ 981-1865 to 68 - Main Office; 726-3147/ 726-3418 - San Jose Branch Office; 740-1407 - Rosario Branch Office at 778-0141/ 778-1719 - Tanauan City Branch Office."
+            android:layout_below="@id/textViewFooter"
+            android:textSize="12dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:textColor="#ED3F3F"/>
+
+    </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>

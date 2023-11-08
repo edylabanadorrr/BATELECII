@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray2"
+    tools:context="com.batelectwo.VideoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:context="com.batelectwo.VideoActivity"
+        android:layout_above="@+id/bottom_navigation"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/light_green">
+
+            <!-- Head -->
+
+            <TextView
+                android:id="@+id/cooperative_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cooperative_name"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textColor="#a08b15"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/light_green">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Ilaw at Ikaw: Your Partner to Brighten Your Life"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <FrameLayout
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp">
+
+                    <VideoView
+                        android:id="@+id/videoViewRepublicAct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </VideoView>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_green">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Teamwork"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <FrameLayout
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp">
+
+                    <VideoView
+                        android:id="@+id/videoViewReels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </VideoView>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/light_green">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Clean Up Drive"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <FrameLayout
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp">
+
+                    <VideoView
+                        android:id="@+id/videoViewCleanUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </VideoView>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/light_green">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Accredited Payment Centers"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <FrameLayout
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp">
+
+                    <VideoView
+                        android:id="@+id/videoViewPaymentCenters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </VideoView>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/light_green">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Reminders about Flying of Kite"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <FrameLayout
+                    android:layout_width="300dp"
+                    android:layout_height="180dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp">
+
+                    <VideoView
+                        android:id="@+id/videoViewKite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </VideoView>
+                </FrameLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation View -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"/>
+
+</RelativeLayout>

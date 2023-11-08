@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserUnitOffices">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <!-- Text View of Unit Office -->
+
+        <TextView
+            android:id="@+id/textViewUnitOffices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unit Offices"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/olive_green">
+
+        </TextView>
+
+        <!-- Text View of Alitagtag Unit Office -->
+
+        <TextView
+            android:id="@+id/textViewAlitagtag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alitagtag_unit_office"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewUnitOffices"
+            android:textColor="@color/sage_green"
+            android:fontFamily="@font/poppinsbold"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+
+        <!-- Text View of Alitagtag Unit Office's Location -->
+
+        <TextView
+            android:id="@+id/textViewAlitagtagLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="158 Poblacion East, Alitagtag, Batangas"
+            android:layout_below="@id/textViewAlitagtag"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+
+            <!-- Text View of Alitagtag Unit Office's Telephone Number -->
+
+            <TextView
+                android:id="@+id/textViewAlitagtagNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alitagtag_telnumber"
+                android:layout_below="@id/textViewAlitagtagLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Alitagtag and Cuenca -->
+
+            <View
+                android:id="@+id/dividerAlitagtag"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewAlitagtagNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Cuenca Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewCuenca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cuenca_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerAlitagtag"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Cuenca Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewCuencaLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brgy. Emmanuel, Cuenca, Batangas"
+                android:layout_below="@id/textViewCuenca"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Cuenca Unit Office's Telephone Number -->
+
+            <TextView
+                android:id="@+id/textViewCuencaNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cuenca_telnumber"
+                android:layout_below="@id/textViewCuencaLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Cuenca and Mabini -->
+
+            <View
+                android:id="@+id/dividerCuenca"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewCuencaNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Mabini Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewMabini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mabini_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerCuenca"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Mabini Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewMabiniLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pulong Niogan, Mabini, Batangas"
+                android:layout_below="@id/textViewMabini"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Mabini Unit Office's Telephone Number -->
+
+            <TextView
+                android:id="@+id/textViewMabiniNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mabini_telnumber"
+                android:layout_below="@id/textViewMabiniLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Mabini and Tingloy -->
+
+            <View
+                android:id="@+id/dividerMabini"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewMabiniNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Tingloy Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewTingloy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tingloy_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerMabini"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Tingloy Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewTingloyLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bgry. 13, Tingloy, Batangas"
+                android:layout_below="@id/textViewTingloy"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Tingloy Unit Office's Telephone Number -->
+
+            <TextView
+                android:id="@+id/textViewTingloyNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tingloy_celnumber"
+                android:layout_below="@id/textViewTingloyLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Tingloy and San Juan -->
+
+            <View
+                android:id="@+id/dividerTingloy"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewTingloyNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of San Juan Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewSanJuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/san_juan_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerTingloy"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of San Juan Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewSanJuanLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Burgos Str., Cor. Kalayaan St. Poblacion, San Juan, Batangas"
+                android:layout_below="@id/textViewSanJuan"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of San Juan Unit Office's Telephone Number -->
+
+            <TextView
+                android:id="@+id/textViewSanJuanNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanjuan_telnumber"
+                android:layout_below="@id/textViewSanJuanLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of San Juan Unit Office's Telefax Number -->
+
+            <TextView
+                android:id="@+id/textViewSanJuanTelefax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanjuan_telefax"
+                android:layout_below="@id/textViewSanJuanNumber"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides San Juan and Taysan -->
+
+            <View
+                android:id="@+id/dividerSanJuan"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewSanJuanTelefax"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Taysan Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewTaysan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taysan_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerSanJuan"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Taysan Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewTaysanLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poblacion West, Taysan, Batangas"
+                android:layout_below="@id/textViewTaysan"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Taysan Unit Office's Celephone Number -->
+
+            <TextView
+                android:id="@+id/textViewTaysanNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taysan_celnumber"
+                android:layout_below="@id/textViewTaysanLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Taysan and Lobo -->
+
+            <View
+                android:id="@+id/dividerTaysan"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewTaysanNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Lobo Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewLobo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lobo_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerTaysan"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Lobo Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewLoboLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poblacion III, Lobo, Batangas"
+                android:layout_below="@id/textViewLobo"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Lobo Unit Office's Celephone Number -->
+
+            <TextView
+                android:id="@+id/textViewLoboNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lobo_celnumber"
+                android:layout_below="@id/textViewLoboLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Lobo and Padre Garcia -->
+
+            <View
+                android:id="@+id/dividerLobo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewLoboNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Padre Garcia Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewPadreGarcia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/padre_garcia_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerLobo"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Padre Garcia Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewPadreGarciaLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Market Site Poblacion, Padre Garcia, Batangas"
+                android:layout_below="@id/textViewPadreGarcia"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Padre Garcia Unit Office's Tel Number -->
+
+            <TextView
+                android:id="@+id/textViewPadreGarciaNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/padregarcia_telnumber"
+                android:layout_below="@id/textViewPadreGarciaLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Padre Garcia and Malvar -->
+
+            <View
+                android:id="@+id/dividerPadreGarcia"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewPadreGarciaNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Malvar Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewMalvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/malvar_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerPadreGarcia"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Malvar Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewMalvarLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B. Leviste St. cor. J. Lantin, Poblacion, Malvar, Batangas"
+                android:layout_below="@id/textViewMalvar"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Malvar Unit Office's Tel Number -->
+
+            <TextView
+                android:id="@+id/textViewMalvarNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/malvar_telnumber"
+                android:layout_below="@id/textViewMalvarLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Malvar and Talisay -->
+
+            <View
+                android:id="@+id/dividerMalvar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewMalvarNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Talisay Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewTalisay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/talisay_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerMalvar"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Talisay Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewTalisayLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gen. Malvar St., Talisay, Batangas"
+                android:layout_below="@id/textViewTalisay"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Talisay Unit Office's Tel Number -->
+
+            <TextView
+                android:id="@+id/textViewTalisayNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/talisay_telnumber"
+                android:layout_below="@id/textViewTalisayLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Malvar and Talisay -->
+
+            <View
+                android:id="@+id/dividerTalisay"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewTalisayNumber"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Text View of Talisay Unit Office -->
+
+            <TextView
+                android:id="@+id/textViewLaurel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/laurel_unit_office"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/dividerTalisay"
+                android:textColor="@color/sage_green"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Laurel Unit Office's Location -->
+
+            <TextView
+                android:id="@+id/textViewLaurelLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poblacion III, Laurel, Batangas"
+                android:layout_below="@id/textViewLaurel"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Text View of Laurel Unit Office's Tel Number -->
+
+            <TextView
+                android:id="@+id/textViewLaurelNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/laurel_celnumber"
+                android:layout_below="@id/textViewLaurelLocation"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <!-- Line that divides Laurel and Relative Layout -->
+
+            <View
+                android:id="@+id/dividerLaurel"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewLaurelNumber"
+                android:background="@android:color/darker_gray" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

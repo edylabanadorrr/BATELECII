@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.batelectwo.UserProfile">
+
+    <item
+        android:id="@+id/menuUpdateProfile"
+        android:title="@string/consumermenu_update_profile" />
+
+    <item
+        android:id="@+id/menuUpdateEmail"
+        android:title="@string/consumermenu_update_email" />
+
+    <item
+        android:id="@+id/menuChangePassword"
+        android:title="@string/consumermenu_change_password" />
+
+    <item
+        android:id="@+id/menuDeleteProfile"
+        android:title="@string/consumermenu_delete_profile" />
+
+</menu>
+

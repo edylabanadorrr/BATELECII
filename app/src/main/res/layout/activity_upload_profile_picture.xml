@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.batelectwo.UploadProfilePicture">
+
+    <!-- Relative Layout for the whole content -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <!-- Head -->
+
+        <TextView
+            android:id="@+id/textViewUploadPictureHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload your profile picture"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <!-- Choose Picture Button -->
+
+        <Button
+            android:id="@+id/uploadPictureChooseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUploadPictureHead"
+            android:layout_marginTop="20dp"
+            android:text="Choose Picture"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="@color/teal_200"/>
+
+        <!-- Where the uploaded picture shows -->
+
+        <ImageView
+            android:id="@+id/imageViewProfilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/uploadPictureChooseButton"/>
+
+        <!-- Button for Upload -->
+
+        <Button
+            android:id="@+id/uploadPictureButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewProfilePicture"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:text="Upload"/>
+
+        <!-- Progress Bar -->
+
+        <ProgressBar
+            android:id="@+id/progressBarShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</ScrollView>

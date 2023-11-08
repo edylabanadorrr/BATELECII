@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- General -->
+
+    <string name="app_name">My Application</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+
+    <!-- Landing Page -->
+
+    <string name="batelec_logo">Batelec Logo</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Login -->
+
+    <string name="cooperative_name">Batangas II Electric Cooperative, Inc.</string>
+    <string name="input_credential">Account Number / Username</string>
+    <string name="password">Password</string>
+    <string name="login_text">LOG IN</string>
+    <string name="forgotpassword"><font color="#007BFF">Forgot password?</font></string>
+    <string name="do_not_have_an_account_register">Do not have an account? <font color="#007BFF">Register</font></string>
+    <string name="still_has_no_account_click_here">Still has no account? Click Here</string>
+
+    <!-- Registration -->
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="address">Address (House No., Barangay, Municipality)</string>
+    <string name="registration">Registration</string>
+    <string name="register_button">Register</string>
+    <string name="register_your_account_now">Start with us!</string>
+    <string name="username">Username</string>
+
+    <!-- Consumer Interface -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="account_number_or_email">Account Number or Email</string>
+
+    <!-- Consumer Menu -->
+
+    <string name="consumermenu_refresh">Refresh</string>
+    <string name="consumermenu_update_profile">Update Profile</string>
+    <string name="consumermenu_update_email">Update Email</string>
+    <string name="consumermenu_settings">Settings</string>
+    <string name="consumermenu_change_password">Change Password</string>
+    <string name="consumermenu_delete_profile">Delete Profile</string>
+    <string name="consumermenu_logout">Logout</string>
+    <string name="userprofile_no_data">No Data</string>
+
+    <!-- User Profile -->
+
+    <string name="welcomeMessage">Welcome, %1$s %2$s!</string>
+
+    <!-- Company History or About -->
+
+    <string name="company_history">The Batangas II Electric Cooperative, Inc. (BATELEC II) is one of the two (2) Electric Cooperatives that distribute electricity to Batangas province with its principal office at Antipolo del Norte, Lipa City. It was organized and was duly registered with the National Electrification Administration (NEA) on August 12, 1977.</string>
+    <string name="company_history2">BATELEC II started its operations on April 24, 1978 in the municipalities of Rosario, Cuenca, Alitagtag, San Jose and San Juan after the right to operate had been bought by the Cooperative from the private owners. BATELEC II then begun on its activities towards the attainment of the thrust of Rural Electrification, that is the total electrification of its coverage area. The task force construction supported by NEA personnel and assistance from different Electric Cooperatives paved the way to the electrification of Lobo on May 9, 1978 which is marked to be the Coop\'s first energization.</string>
+    <string name="company_history3">After two years of operation, finally, on May 28, 1980, the National Electrification Administration granted BATELEC II a permanent franchise for a period of 50 years in the City of Batangas, and municipalities of Mabini, Bauan, San Pascual, Ibaan, Rosario, San Juan, Taysan, Lobo, and Tingloy.</string>
+
+    <!-- Mission and Vision -->
+
+    <string name="vision">The Country\'s Leading Mega-Large Electric Cooperative, providing Quality Electric Service by 2025</string>
+    <string name="mission"><![CDATA[To Provide Safe, Reliable & Affordable Electric Service that will Uplift the Lives of our Member Consumer Owners.]]></string>
+
+    <!-- Core Values -->
+
+    <string name="corevaluesB"><b>B</b> - believe in one’s creativity and values</string>
+    <string name="corevaluesA"><b>A</b> - advocates High performance, work culture and fairness</string>
+    <string name="corevaluesT"><b>T</b> - trust and solidarity</string>
+    <string name="corevaluesE"><b>E</b> - ensure reliability</string>
+    <string name="corevaluesL"><b>L</b> - love for improvement, growth and development</string>
+    <string name="corevaluesE2"><b>E</b> - efficient and competent service</string>
+    <string name="corevaluesC"><b>C</b> - care for the community</string>
+
+    <!-- Three Commandments -->
+
+    <string name="first_commandment"><b>1.</b> Thou shalt provide efficient reliable service</string>
+    <string name="second_commandment"><b>2.</b> Thou shalt serve equally well, courteously and promptly</string>
+    <string name="third_commandment"><b>3.</b> Thou shalt charge fully justified rates.</string>
+
+    <!-- First EC Law -->
+
+    <string name="first_ec_law">Thou shalt protect and promote the rights and interests of the coop members with your whole heart in absolute honesty, maximum efficiency and total solidarity</string>
+    <string name="telefax"><b>Telefax:</b> 043-756-1424, 043-756-6337, 043-981-1865 to 68</string>
+    <string name="mobile"><b>Mobile:</b> +63 917 504 9254 (Globe) +63 908 892 0145 (Smart)</string>
+    <string name="email"><b>E-mail:</b> helpdesk@batelec2.com.ph / admin@batelec2.com.ph</string>
+
+    <!-- User Branches -->
+
+    <string name="areai">Area I (San Jose Branch)</string>
+    <string name="banaybanay">Banay-Banay 1st, San Jose, Batangas</string>
+    <string name="areai_telnumber"><b>Tel. Nos:</b> 043-726-2605, 043-726-3418</string>
+    <string name="areai_telefax"><b>Telefax:</b> 043-726-3417</string>
+    <string name="area_ii_rosario_branch">Area II (Rosario Branch)</string>
+    <string name="areaii_location">Gualberto Avenue, Rosario, Batangas</string>
+    <string name="areaii_telefax"><b>Telefax:</b> 043-740-1406</string>
+    <string name="areaiii_tanauan_branch">Area III (Tanauan Branch)</string>
+    <string name="areaiii_location">President Laurel St., Tanauan City, Batangas</string>
+    <string name="areaiii_telnumbers"><b>Tel. Nos:</b> 043-778-0502, 043-778-1719</string>
+    <string name="areaiii_telefax"><b>Telefax:</b> 043-778-0141</string>
+
+    <!-- Unit Offices -->
+
+    <string name="alitagtag_unit_office">Alitagtag Unit Office</string>
+    <string name="alitagtag_telnumber"><b>Tel. No:</b> 043-772-0079</string>
+    <string name="cuenca_unit_office">Cuenca Unit Office</string>
+    <string name="cuenca_telnumber"><b>Tel. No:</b> 043-772-0343</string>
+    <string name="mabini_unit_office">Mabini Unit Office</string>
+    <string name="mabini_telnumber"><b>Tel. No:</b> 043-425-3099</string>
+    <string name="tingloy_unit_office">Tingloy Unit Office</string>
+    <string name="tingloy_celnumber"><b>Cel. No:</b> 0923-280-3505</string>
+    <string name="san_juan_unit_office">San Juan Unit Office</string>
+    <string name="sanjuan_telnumber"><b>Tel. No:</b> 043-575-3516</string>
+    <string name="sanjuan_telefax"><b>Telefax:</b> 043-341-3083</string>
+    <string name="taysan_unit_office">Taysan Unit Office</string>
+    <string name="taysan_celnumber"><b>Cel. No:</b> 0923-280-3504</string>
+    <string name="lobo_unit_office">Lobo Unit Office</string>
+    <string name="lobo_celnumber"><b>Cel. No:</b> 0923-280-3506</string>
+    <string name="padre_garcia_unit_office">Padre Garcia Unit Office</string>
+    <string name="padregarcia_telnumber"><b>Tel. No:</b> 043-515-9247</string>
+    <string name="malvar_unit_office">Malvar Unit Office</string>
+    <string name="malvar_telnumber"><b>Tel. No:</b> 043-778-3202</string>
+    <string name="talisay_unit_office">Talisay Unit Office</string>
+    <string name="talisay_telnumber"><b>Tel. No:</b> 043-773-0216</string>
+    <string name="laurel_unit_office">Laurel Unit Office</string>
+    <string name="laurel_celnumber"><b>Cel. No:</b> 0923-280-3506</string>
+
+    <!-- Precautions -->
+
+    <string name="wear_appropriate_gear_when_working_on_electrical_systems_wear_appropriate_personal_protective_equipment_ppe"><b>Wear Appropriate Gear:</b> When working on electrical systems, wear appropriate personal protective equipment (PPE)</string>
+    <string name="keep_flammable_materials_away_store_flammable_materials_e_g_paper_cloth_away_from_electrical_equipment_to_reduce_the_risk_of_fires"><b>Keep Flammable Materials Away:</b> Store flammable materials (e.g., paper, cloth) away from electrical equipment to reduce the risk of fires.</string>
+    <string name="properly_grounded_outlets_ensure_that_outlets_are_properly_grounded_and_have_covers_if_they_are_in_potentially_damp_locations"><b>Properly Grounded Outlets:</b> Ensure that outlets are properly grounded and have covers if they are in potentially damp locations.</string>
+    <string name="avoid_diy_electrical_work_for_complex_electrical_tasks_hire_a_qualified_electrician_diy_electrical_work_can_be_dangerous_if_not_done_correctly"><b>Avoid DIY Electrical Work:</b> For complex electrical tasks, hire a qualified electrician. DIY electrical work can be dangerous if not done correctly.</string>
+    <string name="don_t_overload_circuits_avoid_overloading_outlets_or_power_strips_with_too_many_devices_which_can_lead_to_overheating_and_fires"><b>Don\'t Overload Circuits:</b> Avoid overloading outlets or power strips with too many devices, which can lead to overheating and fires.</string>
+    <string name="use_proper_extension_cords_ensure_extension_cords_are_rated_for_the_appliances_they_re_connected_to_and_don_t_use_them_as_a_permanent_solution"><b>Use Proper Extension Cords:</b> Ensure extension cords are rated for the appliances they\'re connected to, and don\'t use them as a permanent solution.</string>
+    <string name="turn_off_power_before_working_on_any_electrical_circuit_or_equipment_turn_off_the_power_at_the_source_use_lockout_tagout_procedures_when_necessary"><b>Turn Off Power:</b> Before working on any electrical circuit or equipment, turn off the power at the source. Use lockout/tagout procedures when necessary.</string>
+    <string name="title_activity_admin_vidoes">AdminVidoes</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+    <string name="i_accept_the_terms_and_conditions">I accept the <font color="#1976D2">Terms and Conditions</font></string>
+</resources>

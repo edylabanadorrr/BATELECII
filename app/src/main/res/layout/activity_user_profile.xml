@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:context="com.batelectwo.UserProfile"
+            android:layout_above="@+id/bottom_navigation"
+            android:scrollbarStyle="outsideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Relative layout for profile picture and display name -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/gradient">
+
+                    <!-- Image View for Profile Picture -->
+
+                    <ImageView
+                        android:id="@+id/imageViewProfileDp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/no_profile_pic" />
+
+                    <!-- Text View for display name -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewShowWelcome"
+                        android:layout_below="@id/imageViewProfileDp"
+                        android:hint="@string/userprofile_no_data"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginTop="5dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/black"/>
+                </RelativeLayout>
+
+                <!-- Relative Layout for data of the logged user -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:layout_margin="15dp"
+                    android:background="@color/white">
+
+                    <!-- Account Number -->
+
+                    <ImageView
+                        android:id="@+id/imageViewAccountNumber"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/account_number"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Account Number"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerAccountNumber"
+                        android:layout_below="@id/imageViewAccountNumber">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textViewShowAccountNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/imageViewAccountNumber"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowAccountNumber"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- First Name -->
+
+                    <ImageView
+                        android:id="@+id/icFirstName"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/baseline_person_24"
+                        android:layout_below="@id/dividerAccountNumber"
+                        android:layout_marginTop="20dp"/>
+
+                    <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Name"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerFirstName"
+                        android:layout_below="@id/icFirstName">
+
+                    </TextView> -->
+
+                    <TextView
+                        android:id="@+id/textViewShowFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icFirstName"
+                        android:hint="@string/userprofile_no_data"
+                        android:layout_below="@id/dividerAccountNumber"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowFirstName"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <!-- Last Name -->
+
+                    <ImageView
+                        android:id="@+id/icLastName"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:background="@drawable/baseline_person_24"
+                        android:layout_below="@id/dividerFirstName"
+                        android:layout_marginTop="20dp"/>
+
+                    <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerLastName"
+                        android:layout_below="@id/icLastName">
+
+                    </TextView> -->
+
+                    <TextView
+                        android:id="@+id/textViewShowLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icLastName"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerFirstName"
+                        android:layout_marginStart="50dp"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowLastName"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Email -->
+
+                    <ImageView
+                        android:id="@+id/icEmail"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/baseline_email_24"
+                        android:layout_below="@id/dividerLastName"
+                        android:layout_marginTop="20dp"/>
+
+                    <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerEmail"
+                        android:layout_below="@id/icEmail">
+
+                    </TextView> -->
+
+                    <TextView
+                        android:id="@+id/textViewShowEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icEmail"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerLastName"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowEmail"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Address -->
+
+                    <ImageView
+                        android:id="@+id/icAddress"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_address"
+                        android:layout_below="@id/dividerEmail"
+                        android:layout_marginTop="20dp"/>
+
+                    <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerAddress"
+                        android:layout_below="@id/icAddress">
+
+                    </TextView> -->
+
+                    <TextView
+                        android:id="@+id/textViewShowAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icAddress"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerEmail"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowAddress"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Contact Number -->
+
+                    <ImageView
+                        android:id="@+id/icContactNumber"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/baseline_call_24"
+                        android:layout_below="@id/dividerAddress"
+                        android:layout_marginTop="20dp"/>
+
+                    <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Number"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerContactNumber"
+                        android:layout_below="@id/icContactNumber">
+
+                    </TextView> -->
+
+                    <TextView
+                        android:id="@+id/textViewShowContactNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icContactNumber"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerAddress"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerContactNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowContactNumber"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Username -->
+
+                    <ImageView
+                        android:id="@+id/icUsername"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_username"
+                        android:layout_below="@id/dividerContactNumber"
+                        android:layout_marginTop="20dp"/>
+
+                    <!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerUsername"
+                        android:layout_below="@id/icUsername">
+
+                    </TextView> -->
+
+                    <TextView
+                        android:id="@+id/textViewShowUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icUsername"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerContactNumber"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowUsername"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- User ID -->
+
+                    <ImageView
+                        android:id="@+id/icUserID"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_userid"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerUsername"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User ID"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_alignEnd="@id/dividerUserID"
+                        android:layout_marginTop="25dp"
+                        android:layout_below="@id/icUserID">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textViewShowUserID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/icUserID"
+                        android:hint="@string/userprofile_no_data"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/dividerUsername"
+                        android:textSize="18sp"/>
+
+                    <View
+                        android:id="@+id/dividerUserID"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/textViewShowUserID"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/generateQRButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Generate QR Code"
+                        android:layout_below="@id/dividerUserID"
+                        android:layout_marginTop="10dp"/>
+
+
+                    <!-- Progress Bar -->
+
+                    <ProgressBar
+                        android:id="@+id/progressBarShow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:elevation="10dp"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Bottom Navigation View -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav" />
+</RelativeLayout>
+
+

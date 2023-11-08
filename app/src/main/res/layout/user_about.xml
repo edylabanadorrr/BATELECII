@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserAbout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <!-- Head -->
+
+        <TextView
+            android:id="@+id/cooperative_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cooperative_name"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#a08b15"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <!-- Text View Company History -->
+
+        <TextView
+            android:id="@+id/textViewCompanyHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Company History"
+            android:textColor="@color/olive_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- Company History Labels -->
+
+        <TextView
+            android:id="@+id/textCompanyHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/company_history"
+            android:gravity="fill_horizontal"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCompanyHistory2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/company_history2"
+            android:gravity="fill_horizontal"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCompanyHistory3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/company_history3"
+            android:gravity="fill_horizontal"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Line that divides company history and mission vision -->
+
+        <View
+            android:id="@+id/dividerCompanyHistory"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/textCompanyHistory3"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Text View Mission and Vission -->
+
+        <TextView
+            android:id="@+id/textViewMissionVision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mission &amp; Vision"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/olive_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- Text View for Vision -->
+
+        <TextView
+            android:id="@+id/textViewVision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Our Vision"
+            android:gravity="fill_horizontal"
+            android:textColor="@color/sage_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- Vision Label -->
+
+        <TextView
+            android:id="@+id/textVision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/vision"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Text View for Mission -->
+
+        <TextView
+            android:id="@+id/textViewMission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Our Mission"
+            android:gravity="fill_horizontal"
+            android:textColor="@color/sage_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- Mission Label -->
+
+        <TextView
+            android:id="@+id/textMission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/mission"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Line that divides mission vision and core values -->
+
+        <View
+            android:id="@+id/dividerMissionVision"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/textMission"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Core Values -->
+
+        <TextView
+            android:id="@+id/textViewCoreValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Core Values"
+            android:gravity="fill_horizontal"
+            android:textColor="@color/olive_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- Core Values Label -->
+
+        <TextView
+            android:id="@+id/textCoreValuesB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesB"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCoreValuesA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesA"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCoreValuesT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesT"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCoreValuesE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesE"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCoreValuesL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesL"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCoreValuesE2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesE2"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textCoreValuesC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/corevaluesC"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Line that divides mission vision and core values -->
+
+        <View
+            android:id="@+id/dividerCoreValues"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/textCoreValuesC"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Text View of Three Commandments -->
+
+        <TextView
+            android:id="@+id/textViewThreeCommandments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Three Commandments"
+            android:gravity="fill_horizontal"
+            android:textColor="@color/olive_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- First Commandment -->
+
+        <TextView
+            android:id="@+id/textFirstCommandment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/first_commandment"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Second Commandment -->
+
+        <TextView
+            android:id="@+id/textSecondCommandment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/second_commandment"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Third Commandment -->
+
+        <TextView
+            android:id="@+id/textThirdCommandment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/third_commandment"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+        <!-- Line that divides Three Commandments and first EC Law -->
+
+        <View
+            android:id="@+id/dividerThreeCommandments"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/textThirdCommandment"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Text View of First EC LAW -->
+
+        <TextView
+            android:id="@+id/textViewFirstECLaw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="1st EC LAW"
+            android:gravity="fill_horizontal"
+            android:textColor="@color/olive_green"
+            android:fontFamily="@font/poppinsbold">
+
+        </TextView>
+
+        <!-- First EC Law Label -->
+
+        <TextView
+            android:id="@+id/textFirstECLaw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/first_ec_law"
+            android:justificationMode="inter_word"
+            android:gravity="fill_horizontal"
+            android:fontFamily="@font/poppinsmedium">
+
+        </TextView>
+
+
+    </LinearLayout>
+</ScrollView>

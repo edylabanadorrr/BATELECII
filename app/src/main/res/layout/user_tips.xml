@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserTips">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do something to lower your bills"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/olive_green">
+
+        </TextView>
+
+            <TextView
+                android:id="@+id/textViewTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your electric bill maybe eating-up a big part of your monthly budget…well there are several reasons why…
+We have provided several tips to help you save energy."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewHead"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textViewRefrigeratorHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refrigerator"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textViewRefrigerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don't let freezers build up ore than 6 mm of frost. Defrost regularly to keep freezers working their best."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewRefrigeratorHead"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp">
+
+            </TextView>
+
+            <View
+                android:id="@+id/dividerRefrigerator"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewRefrigerator"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textViewRefrigerator2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set the temperature for only as cold as you need; check manufacturer’s recommendations."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerRefrigerator"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerRefrigerator2"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewRefrigerator2"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textViewRefrigerator3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don’t overfill the refrigerator, as this blocks air circulation. Conversely, a full freezer will perform better than an empty one."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerRefrigerator2"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewClothesHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clothes Washer and Dryer"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/sage_green"/>
+
+            <TextView
+                android:id="@+id/textViewClothes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Always use cold water for the RINSE cycle. Using warm or hot water for the RINSE cycle does not get your clothes any cleaner."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewClothesHead"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerClothes2"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewClothes"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textViewClothes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wash your clothes in cold or warm water. A whopping 85-90% of the energy used by washing machines is for heating the water! You can save a lot of energy by lowering the water temperature."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerClothes2"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerClothes3"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewClothes2"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textViewClothes3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make sure clothes are effectively wrung before putting them in the dryer. (Front-loading washers are the best at squeezing the water out!)"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerClothes3"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewLightingHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lighting"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/sage_green"/>
+
+        <TextView
+            android:id="@+id/textViewLighting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turn off lights whenever you leave a room or don't need them, even for just a few minutes."
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textViewLightingHead"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/dividerLighting"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewLighting"
+            android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textViewLighting2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can lower overall energy demand by concentrating bright light where you need it rather than evenly lighting the entire room – this is called ‘task lighting’."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerLighting"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerLighting2"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewLighting2"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textViewLighting3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Decorate your home with illumination in mind – lighter colors reflect light, so use them in areas you want to be bright."
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerLighting2"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewHomeOfficeHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home Office"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/sage_green"/>
+
+        <TextView
+            android:id="@+id/textViewHomeOffice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Computers and related components use electricity even when they are not in use. Plug each computer component into a power bar that can be shut off, to avoid wasting electricity with the 'standby' power feature."
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textViewHomeOfficeHead"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/dividerHomeOffice"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewHomeOffice"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewHomeOffice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consider energy-efficient computer systems and monitors when you replace a system. Make sure you enable your computer’s energy-saving features."
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/dividerHomeOffice"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/dividerHomeOffice2"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewHomeOffice2"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewHomeOffice3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Be sure to at least shut off the computer screen, as 60% of the power used by a computer is used by the monitor! (The other 40% is used to keep your hard drive spinning and to power the electronics.)"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/dividerHomeOffice2"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewHeatingHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heating and Cooling"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/sage_green"/>
+
+        <TextView
+            android:id="@+id/textViewHeating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Install ceiling fans and use them to supplement or even as an alternative to air conditiong - ceiling fans generally use very little electricity. Make sure your fan is blowing air downwards in summer."
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textViewHeatingHead"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/dividerHeating"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewHeating"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewHeating2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To save money on heating costs, reduce the temperature of your home a few degrees at night and when you’re away."
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/dividerHeating"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/dividerHeating2"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewHeating2"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewHeating3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To save more on central AC costs, try cooling your home to only 24 or 25 °C instead of the low 20’s. Each degree below 26 °C will noticeably increase your electricity use!"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/dividerHeating2"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

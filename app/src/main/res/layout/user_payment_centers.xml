@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserPaymentCenters">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <!-- Head -->
+
+        <TextView
+            android:id="@+id/cooperative_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cooperative_name"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#a08b15"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <!-- Text View of Accredited Payment Centers -->
+
+            <TextView
+                android:id="@+id/textViewAccredited"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accredited Payment Centers"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/sage_green"/>
+
+            <!-- SM CITY LIPA -->
+
+            <TextView
+                android:id="@+id/textViewLipa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SM CITY LIPA"
+                android:layout_below="@id/textViewAccredited"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Lipa and Batangas -->
+
+            <View
+                android:id="@+id/dividerLipa"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewLipa"
+                android:background="@android:color/darker_gray" />
+
+            <!-- SM CITY BATANGAS -->
+
+            <TextView
+                android:id="@+id/textViewBatangas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SM CITY BATANGAS"
+                android:layout_below="@id/dividerLipa"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that divides Batangas and Tanauan -->
+
+            <View
+                android:id="@+id/dividerBatangas"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewBatangas"
+                android:background="@android:color/darker_gray" />
+
+            <!-- SAVE MORE VICTORY MALL TANAUAN -->
+
+            <TextView
+                android:id="@+id/textViewTanauan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE MORE VICTORY MALL TANAUAN"
+                android:layout_below="@id/dividerBatangas"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Tanauan and Rosario -->
+
+            <View
+                android:id="@+id/dividerTanauan"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewTanauan"
+                android:background="@android:color/darker_gray" />
+
+            <!-- SM HYPERMARKET - BATANGAS AND ROSARIO -->
+
+            <TextView
+                android:id="@+id/textViewRosario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SM HYPERMARKET - BATANGAS AND ROSARIO"
+                android:layout_below="@id/dividerTanauan"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Tanauan and Makiling -->
+
+            <View
+                android:id="@+id/dividerRosario"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewRosario"
+                android:background="@android:color/darker_gray" />
+
+            <!-- WALTER MART TANAUAN AND MAKILING -->
+
+            <TextView
+                android:id="@+id/textViewMakiling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WALTER MART TANAUAN AND MAKILING"
+                android:layout_below="@id/dividerRosario"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Makiling and Bayad Center -->
+
+            <View
+                android:id="@+id/dividerMakiling"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewMakiling"
+                android:background="@android:color/darker_gray" />
+
+            <!-- BAYAD CENTER - ALL BRANCHES, ROBINSON'S DEPARTMENT STORES, LBC, USSC and LAZADA -->
+
+            <TextView
+                android:id="@+id/textViewBayadCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BAYAD CENTER - ALL BRANCHES, ROBINSON'S DEPARTMENT STORES, LBC, USSC and LAZADA"
+                android:layout_below="@id/dividerMakiling"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Bayad Center and GPRS -->
+
+            <View
+                android:id="@+id/dividerBayadCenter"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewBayadCenter"
+                android:background="@android:color/darker_gray" />
+
+            <!-- GLOBAL PINOY REMITTANCE AND SERVICES, INC. (GPRS) - ALL BRANCHES -->
+
+            <TextView
+                android:id="@+id/textViewGPRS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GLOBAL PINOY REMITTANCE AND SERVICES, INC. (GPRS) - ALL BRANCHES"
+                android:layout_below="@id/dividerBayadCenter"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that GPRS and Lodlod -->
+
+            <View
+                android:id="@+id/dividerGPRS"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewGPRS"
+                android:background="@android:color/darker_gray" />
+
+            <!-- LODLOD MULTI-PURPOSE COOPERATIVE - LIPA CITY -->
+
+            <TextView
+                android:id="@+id/textViewLodlod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LODLOD MULTI-PURPOSE COOPERATIVE - LIPA CITY"
+                android:layout_below="@id/dividerGPRS"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Lodlod and Sangkap -->
+
+            <View
+                android:id="@+id/dividerLodlod"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewLodlod"
+                android:background="@android:color/darker_gray" />
+
+            <!-- SANGKAP MULTI-PURPOSE COOPERATIVE - LIPA CITY -->
+
+            <TextView
+                android:id="@+id/textViewSangkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SANGKAP MULTI-PURPOSE COOPERATIVE - LIPA CITY"
+                android:layout_below="@id/dividerLodlod"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Sangkap and Robinson -->
+
+            <View
+                android:id="@+id/dividerSangkap"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewSangkap"
+                android:background="@android:color/darker_gray" />
+
+            <!-- ROBINSON’s BANK - LIPA CITY -->
+
+            <TextView
+                android:id="@+id/textViewRobinson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ROBINSON’s BANK - LIPA CITY"
+                android:layout_below="@id/dividerSangkap"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Robinson and Metrobank -->
+
+            <View
+                android:id="@+id/dividerRobinson"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewRobinson"
+                android:background="@android:color/darker_gray" />
+
+            <!-- METROBANK - ALL BRANCHES -->
+
+            <TextView
+                android:id="@+id/textViewMetrobank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="METROBANK - ALL BRANCHES"
+                android:layout_below="@id/dividerRobinson"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Metrobank and ECPAY -->
+
+            <View
+                android:id="@+id/dividerMetrobank"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewMetrobank"
+                android:background="@android:color/darker_gray" />
+
+            <!-- ECPAY - ALL BRANCHES, 7-11, TRUEMONEY, GCASH, PAYMAYA, and MEGAPAY -->
+
+            <TextView
+                android:id="@+id/textViewECPAY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ECPAY - ALL BRANCHES, 7-11, TRUEMONEY, GCASH, PAYMAYA, and MEGAPAY"
+                android:layout_below="@id/dividerMetrobank"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that ECPAY and Express Pay-->
+
+            <View
+                android:id="@+id/dividerECPAY"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewECPAY"
+                android:background="@android:color/darker_gray" />
+
+            <!-- EXPRESS PAY- ALL BRANCHES -->
+
+            <TextView
+                android:id="@+id/textViewExpressPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXPRESS PAY- ALL BRANCHES"
+                android:layout_below="@id/dividerECPAY"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Express Pay and Lipa Bank -->
+
+            <View
+                android:id="@+id/dividerExpressPay"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewExpressPay"
+                android:background="@android:color/darker_gray" />
+
+            <!-- LIPA BANK -->
+
+            <TextView
+                android:id="@+id/textViewLipaBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LIPA BANK"
+                android:layout_below="@id/dividerExpressPay"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Lipa Bank and Philippine Veterans Bank -->
+
+            <View
+                android:id="@+id/dividerLipaBank"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewLipaBank"
+                android:background="@android:color/darker_gray" />
+
+            <!-- PHILIPPINE VETERANS BANK - ALL BRANCHES -->
+
+            <TextView
+                android:id="@+id/textViewPhilVeterans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PHILIPPINE VETERANS BANK - ALL BRANCHES"
+                android:layout_below="@id/dividerLipaBank"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Philippine Veterans Bank and Cebuana -->
+
+            <View
+                android:id="@+id/dividerPhilVeterans"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewPhilVeterans"
+                android:background="@android:color/darker_gray" />
+
+            <!-- CEBUANA LHUILLIER - ALL BRANCHES -->
+
+            <TextView
+                android:id="@+id/textViewCebuana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CEBUANA LHUILLIER - ALL BRANCHES"
+                android:layout_below="@id/dividerPhilVeterans"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Cebuana and Progressive Bank -->
+
+            <View
+                android:id="@+id/dividerCebuana"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewCebuana"
+                android:background="@android:color/darker_gray" />
+
+            <!-- PROGRESSIVE BANK -->
+
+            <TextView
+                android:id="@+id/textViewProgressive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PROGRESSIVE BANK"
+                android:layout_below="@id/dividerCebuana"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Progressive Bank and Banco De Oro -->
+
+            <View
+                android:id="@+id/dividerProgressive"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewProgressive"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Banco De Oro (BDO) - ALL BRANCHES -->
+
+            <TextView
+                android:id="@+id/textViewBancoDeOro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banco De Oro (BDO) - ALL BRANCHES"
+                android:layout_below="@id/dividerProgressive"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that Banco De Oro and UCPB -->
+
+            <View
+                android:id="@+id/dividerBancoDeOro"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewBancoDeOro"
+                android:background="@android:color/darker_gray" />
+
+            <!-- UNITED COCONUT PLANTERS BANK (UCPB) -->
+
+            <TextView
+                android:id="@+id/textViewUCPB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UNITED COCONUT PLANTERS BANK (UCPB)"
+                android:layout_below="@id/dividerBancoDeOro"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that UCPB and PNB -->
+
+            <View
+                android:id="@+id/dividerUCPB"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewUCPB"
+                android:background="@android:color/darker_gray" />
+
+            <!-- PHILIPPINE NATIONAL BANK (PNB) SAVINGS BANK -->
+
+            <TextView
+                android:id="@+id/textViewPNB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PHILIPPINE NATIONAL BANK (PNB) SAVINGS BANK"
+                android:layout_below="@id/dividerUCPB"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- Line that PNB and KRIZ TRADING -->
+
+            <View
+                android:id="@+id/dividerPNB"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewPNB"
+                android:background="@android:color/darker_gray" />
+
+            <!-- DJ KRIZ TRADING AND SERVICES -->
+
+            <TextView
+                android:id="@+id/textViewDJ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DJ KRIZ TRADING AND SERVICES"
+                android:layout_below="@id/dividerPNB"
+                android:fontFamily="@font/poppinsbold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <!-- KRIZ TRADING and Relative Layout -->
+
+            <View
+                android:id="@+id/dividerDJ"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewDJ"
+                android:background="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

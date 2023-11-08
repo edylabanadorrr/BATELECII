@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserContact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
+
+        <!-- Text View of Contact -->
+
+        <TextView
+            android:id="@+id/textViewContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/olive_green">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewCooperativeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Batangas II Electric Cooperative"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewContact"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewAntipolo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Antipolo Del Norte"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewCooperativeName"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewLipa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lipa City, Batangas"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewAntipolo"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewPhilippines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Philippines 4200"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewLipa"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+
+        <!-- Email -->
+
+        <ImageView
+            android:id="@+id/ImageViewEmail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/textViewPhilippines"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/baseline_email_24"
+            android:layout_marginStart="10dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewPhilippines"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:text="admin@batelec2.com.ph">
+
+        </TextView>
+
+        <!-- Line that divides email and first phone number -->
+
+        <View
+            android:id="@+id/dividerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewEmail"
+            android:background="@android:color/darker_gray" />
+
+        <!-- First Phone Number -->
+
+        <ImageView
+            android:id="@+id/ImageViewCall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="Philippines 4200"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dividerEmail"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/baseline_call_24"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textViewFirstNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerEmail"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:text="(043) 756-1424">
+
+        </TextView>
+
+        <!-- Line that divides first phone number and second phone number -->
+
+        <View
+            android:id="@+id/dividerFirstNumber"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewFirstNumber"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Second Phone Number -->
+
+        <ImageView
+            android:id="@+id/ImageViewCall2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="Philippines 4200"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dividerFirstNumber"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/baseline_call_24"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textViewSecondNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerFirstNumber"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:text="(043) 981-1865 to 68">
+
+        </TextView>
+
+        <!-- Line that divides second and third phone number -->
+
+        <View
+            android:id="@+id/dividerSecondNumber"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewSecondNumber"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Third Phone Number -->
+
+        <ImageView
+            android:id="@+id/ImageViewCall3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="Philippines 4200"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dividerSecondNumber"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/baseline_call_24"
+            android:justificationMode="inter_word"
+            android:layout_marginStart="10dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textViewThirdNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerSecondNumber"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:text="(043) 756-6337">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

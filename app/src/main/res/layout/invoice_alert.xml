@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageViewInvoice"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:padding="10dp"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/printInvoiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Print"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/print_button_background"/>
+
+    <Button
+        android:id="@+id/cancelInvoiceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="@color/maroon"
+        android:padding="15dp"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

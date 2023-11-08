@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserRecruitmentProcess">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewRefrigeratorHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recruitment Process"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/sage_green"/>
+
+            <!-- First Process -->
+
+            <TextView
+                android:id="@+id/textViewFirstProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Posting of Vacant Position for Hiring"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textViewRefrigeratorHead"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerFirstProcess"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewFirstProcess"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Second Process -->
+
+            <TextView
+                android:id="@+id/textViewSecondProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Screening of Applicant's Resume"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerFirstProcess"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerSecondProcess"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewSecondProcess"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Third Process -->
+
+            <TextView
+                android:id="@+id/textViewThirdProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Schedule of Exam"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerSecondProcess"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerThirdProcess"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewThirdProcess"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Fourth Process -->
+
+            <TextView
+                android:id="@+id/textViewFourthProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Facilitate Exam"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerThirdProcess"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerFourthProcess"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewFourthProcess"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Fifth Process -->
+
+            <TextView
+                android:id="@+id/textViewFifthProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Schedule of Panel Board Interview"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerFourthProcess"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/dividerFifthProcess"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textViewFifthProcess"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Sixth Process -->
+
+            <TextView
+                android:id="@+id/textViewSixthProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Final Interview with GM or AGM"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dividerFifthProcess"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

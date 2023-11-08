@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray2"
+    tools:context=".UserAntiElectricity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/gradient_login">
+
+        <!-- Title -->
+
+        <TextView
+            android:id="@+id/cooperative_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:text="@string/cooperative_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/olive_green"
+            android:textSize="30sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageViewAntiElectricity"
+            android:layout_width="500dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cooperative_name"
+            android:background="@drawable/anti_electricity">
+
+            </ImageView>
+        </RelativeLayout>
+    </ScrollView>
+</HorizontalScrollView>

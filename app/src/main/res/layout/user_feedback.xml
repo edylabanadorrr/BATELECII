@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserFeedback">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:context="com.batelectwo.UserProfile"
+            android:scrollbarStyle="outsideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Head -->
+
+                <TextView
+                    android:id="@+id/cooperative_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cooperative_name"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#a08b15"
+                    android:textSize="30sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:padding="15dp"
+                    android:background="@color/light_gray2">
+
+                <!-- Text View for Email -->
+
+                <TextView
+                    android:id="@+id/textViewEmailLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeLayoutFeedback"
+                    android:layout_marginTop="20dp"
+                    android:padding="6dp"
+                    android:text="Email Address"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <!-- Shows the current email -->
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewEmailLabel"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/border"
+                    android:padding="10dp"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <!-- Text View for User ID -->
+
+                <TextView
+                    android:id="@+id/textViewUserIDLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewEmail"
+                    android:layout_marginTop="20dp"
+                    android:padding="6dp"
+                    android:text="User ID"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <!-- Shows the user ID -->
+
+                <TextView
+                    android:id="@+id/textViewUserID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewUserIDLabel"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/border"
+                    android:padding="10dp"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textViewFeedbackMatters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewUserID"
+                        android:layout_marginTop="30dp"
+                        android:text="Your feedback matters!"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textSize="20dp"
+                        android:textAlignment="center"/>
+
+                    <!-- Input Feedback -->
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:hint="Send us your feedback!"
+                        android:background="@color/white"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_below="@+id/textViewFeedbackMatters"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="top|left"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray2"
+                        android:textColorHint="@color/blurryblack" />
+
+                    <!-- Send Feedback Button -->
+
+                    <Button
+                        android:id="@+id/sendFeedbackButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/textInputEditTextFeedback"
+                        android:layout_centerHorizontal="true"
+                        android:text="Send Feedback"/>
+
+                    <!-- Progress Bar -->
+
+                    <ProgressBar
+                        android:id="@+id/progressBarShow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:elevation="10dp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

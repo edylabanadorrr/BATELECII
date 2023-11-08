@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.batelectwo">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_WRITE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/batelec_logo_updated_black"
+        android:label="BATELEC II"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".UserRecruitmentProcess"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserPaymentCenters"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserTools"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AdminSentFeedbacks"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AdminSubmittedTickets"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AdminSettings"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AdminVideos"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".VideoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserPrecautions"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserTips"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserFeedback"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserTicket"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserInstallationRequirements"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AdminProfile"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserSettings"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".AddConsumer"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AdminInterface" />
+        </activity>
+        <activity
+            android:name=".AdminConsumers"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AdminInterface" />
+        </activity>
+        <activity
+            android:name=".BillActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserUnitOffices"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserBranches"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserMainOffice"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserAntiElectricity"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserRates"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserContact"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AdminInterface" />
+        </activity>
+        <activity
+            android:name=".UserAbout"
+            android:exported="false"
+            android:parentActivityName=".ConsumerInterface"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".DeleteProfile"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".ChangePassword"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UpdateEmail"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UpdateProfile"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UploadProfilePicture"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".UserProfile"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".Registration"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Login" />
+
+        <activity
+            android:name=".ConsumerInterface"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConsumerInterface" />
+        </activity>
+        <activity
+            android:name=".AdminInterface"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AdminInterface" />
+        </activity>
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login" />
+        </activity>
+        <activity
+            android:name=".Login"
+            android:exported="false"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

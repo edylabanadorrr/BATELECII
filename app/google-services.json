@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "179534586113",
+    "firebase_url": "https://batelecii-92d48-default-rtdb.firebaseio.com",
+    "project_id": "batelecii-92d48",
+    "storage_bucket": "batelecii-92d48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179534586113:android:b53989f59ba10628d93b00",
+        "android_client_info": {
+          "package_name": "com.batelectwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179534586113-71mjbd8apsaqrekb28kq7rat00nnfvtc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnDkiIWXN6opT1jwOCoOB1Q4jmniqvefU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179534586113-71mjbd8apsaqrekb28kq7rat00nnfvtc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

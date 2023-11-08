@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.batelectwo.ConsumerInterface">
+
+        <item android:title="Consumer">
+            <menu>
+                    <group android:checkableBehavior="single">
+
+                            <item
+                                android:id="@+id/menuTips"
+                                android:title="Consumer Tips"
+                                android:icon="@drawable/baseline_tips_24"/>
+
+                            <item
+                                android:id="@+id/menuAntiElectricity"
+                                android:title="Anti-Electricity (RA 7832)"
+                                android:icon="@drawable/baseline_gavel_24"/>
+
+                            <item
+                                android:id="@+id/menuInstallationRequirements"
+                                android:title="Installation Requirements"
+                                android:icon="@drawable/installation_requirements"/>
+
+                            <item
+                                android:id="@+id/menuRates"
+                                android:title="Rates"
+                                android:icon="@drawable/baseline_rates_24"/>
+
+                            <item
+                                android:id="@+id/menuAccreditedPaymentCenters"
+                                android:title="Accredited Payment Centers"
+                                android:icon="@drawable/bank"/>
+
+                    </group>
+            </menu>
+        </item>
+
+        <item android:title="Contact Information">
+            <menu>
+                    <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/menuContact"
+                        android:checkableBehavior="single"
+                        android:icon="@drawable/baseline_call_24"
+                        android:title="Contact" />
+
+                    <item
+                        android:id="@+id/menuMainOffice"
+                        android:checkableBehavior="single"
+                        android:icon="@drawable/apartment"
+                        android:title="Main Office" />
+
+                    <item
+                        android:id="@+id/menuBranches"
+                        android:checkableBehavior="single"
+                        android:icon="@drawable/city"
+                        android:title="Branches" />
+
+                    <item
+                        android:id="@+id/menuUnitOffices"
+                        android:checkableBehavior="single"
+                        android:icon="@drawable/home"
+                        android:title="Unit Offices" />
+                    </group>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/menuRecruitmentProcess"
+            android:checkableBehavior="single"
+            android:icon="@drawable/recruitment_process"
+            android:title="Recruitment Process" />
+
+        <item
+            android:id="@+id/menuPrecautions"
+            android:checkableBehavior="single"
+            android:icon="@drawable/precaution"
+            android:title="Precautions" />
+
+        <item
+            android:id="@+id/menuTools"
+            android:checkableBehavior="single"
+            android:icon="@drawable/tools"
+            android:title="Tools" />
+
+        <item
+            android:id="@+id/menuSettings"
+            android:checkableBehavior="single"
+            android:title="@string/consumermenu_settings"
+            android:icon="@drawable/baseline_settings_24"/>
+
+        </menu>

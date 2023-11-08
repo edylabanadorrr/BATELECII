@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context="com.batelectwo.UserSettings">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <!-- About -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cooperative_name"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:background="@color/light_gray2">
+
+    <ImageView
+        android:id="@+id/imageViewAbout"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/baseline_info_24"/>
+
+    <TextView
+        android:id="@+id/aboutSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/imageViewAbout"
+        android:layout_marginStart="50dp"
+        android:textSize="18sp"
+        android:text="About"/>
+
+        <ImageView
+            android:id="@+id/imageViewRightAngle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@id/aboutSettings"
+            android:layout_marginStart="230dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:background="@drawable/angle_right"/>
+
+        <View
+            android:id="@+id/dividerAbout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/imageViewRightAngle"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+
+    <!-- Submit Ticket -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutAbout"
+        android:padding="10dp"
+        android:background="@color/light_gray2">
+
+        <ImageView
+            android:id="@+id/imageViewTicket"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/submit_ticket"/>
+
+        <TextView
+            android:id="@+id/ticketSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/imageViewTicket"
+            android:layout_marginStart="50dp"
+            android:textSize="18sp"
+            android:text="Submit Ticket"/>
+
+        <ImageView
+            android:id="@+id/imageViewRightAngleTicket"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@id/ticketSettings"
+            android:layout_marginStart="230dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:background="@drawable/angle_right"/>
+
+        <View
+            android:id="@+id/dividerTicket"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/imageViewTicket"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+    <!-- Send Feedback -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutTicket"
+        android:padding="10dp"
+        android:background="@color/light_gray2">
+
+        <ImageView
+            android:id="@+id/imageViewFeedback"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/feedback"/>
+
+        <TextView
+            android:id="@+id/feedbackSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/imageViewFeedback"
+            android:layout_marginStart="50dp"
+            android:textSize="18sp"
+            android:text="Send Feedback"/>
+
+        <ImageView
+            android:id="@+id/imageViewRightAngleFeedback"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@id/feedbackSettings"
+            android:layout_marginStart="230dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:background="@drawable/angle_right"/>
+
+        <View
+            android:id="@+id/dividerFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/imageViewFeedback"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+    <!-- Logout -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutFeedback"
+        android:padding="10dp"
+        android:background="@color/light_gray2">
+
+        <ImageView
+            android:id="@+id/imageViewLogout"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/baseline_logout_24"/>
+
+        <TextView
+            android:id="@+id/logoutSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/imageViewLogout"
+            android:layout_marginStart="50dp"
+            android:textSize="18sp"
+            android:text="Logout"/>
+
+        <ImageView
+            android:id="@+id/imageViewRightAngleLogout"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@id/logoutSettings"
+            android:layout_marginStart="230dp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:background="@drawable/angle_right"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

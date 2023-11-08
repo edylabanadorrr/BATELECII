@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.batelectwo.UpdateProfile"
+    android:background="@drawable/gradient_login">
+
+    <!-- Relative Layout for the whole content -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+        <!-- Head -->
+
+        <TextView
+            android:id="@+id/textViewUpdateProfileHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="You can update your profile details now"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <!-- First Name -->
+
+        <TextView
+            android:id="@+id/textViewFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewUpdateProfileHead"
+            android:text="@string/first_name"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="15dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTextUpdateProfileFirstName"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:drawablePadding="20dp"
+            android:layout_below="@id/textViewFirstName"
+            android:fontFamily="@font/poppinsmedium"
+            android:hint="@string/first_name"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textColor="@color/gray2"
+            android:textColorHint="@color/blurryblack"/>
+
+        <!-- Last Name -->
+
+        <TextView
+            android:id="@+id/textViewLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextInputEditTextUpdateProfileFirstName"
+            android:text="@string/last_name"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="15dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTextUpdateProfileLastName"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:drawablePadding="20dp"
+            android:layout_below="@id/textViewLastName"
+            android:fontFamily="@font/poppinsmedium"
+            android:hint="@string/last_name"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/gray2"
+            android:textColorHint="@color/blurryblack"/>
+
+        <!-- Address -->
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextInputEditTextUpdateProfileLastName"
+            android:text="@string/address"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="15dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTextUpdateProfileAddress"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:drawablePadding="20dp"
+            android:layout_below="@id/textViewAddress"
+            android:fontFamily="@font/poppinsmedium"
+            android:hint="@string/address"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/gray2"
+            android:textColorHint="@color/blurryblack"/>
+
+        <!-- Contact Number -->
+
+        <TextView
+            android:id="@+id/textViewContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextInputEditTextUpdateProfileAddress"
+            android:text="@string/contact_number"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="15dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTextUpdateProfileContactNumber"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:drawablePadding="20dp"
+            android:inputType="number"
+            android:layout_below="@id/textViewContactNumber"
+            android:fontFamily="@font/poppinsmedium"
+            android:hint="@string/contact_number"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/gray2"
+            android:textColorHint="@color/blurryblack"/>
+
+        <!-- Username -->
+
+        <TextView
+            android:id="@+id/textViewUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextInputEditTextUpdateProfileContactNumber"
+            android:text="@string/username"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_marginTop="15dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTextUpdateProfileUsername"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:drawablePadding="20dp"
+            android:layout_below="@id/textViewUsername"
+            android:fontFamily="@font/poppinsmedium"
+            android:hint="@string/username"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/gray2"
+            android:textColorHint="@color/blurryblack"/>
+
+        <!-- Update Profile -->
+
+        <Button
+            android:id="@+id/profileUpdateProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_below="@id/TextInputEditTextUpdateProfileUsername"
+            android:backgroundTint="@color/sage_green"/>
+
+        <!-- Progress Bar -->
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:elevation="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
