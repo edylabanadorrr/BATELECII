@@ -3,6 +3,7 @@ package com.batelectwo;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -28,6 +29,14 @@ public class UserInstallationRequirements extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Installation Requirements");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    // Creating Action Bar Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu items
+        getMenuInflater().inflate(R.menu.user_installation_requirements, menu);
+        return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -74,9 +83,17 @@ public class UserInstallationRequirements extends AppCompatActivity {
                 });
             }
             return true;
+        } else if (id == R.id.menuApplicationForm) {
+                Intent intent = new Intent(UserInstallationRequirements.this, UserApplicationForm.class);
+                startActivity(intent);
+                return true;
+        } else if (id == R.id.menuRequirementsNewConnection) {
+                Intent intent = new Intent(UserInstallationRequirements.this, ChangePassword.class);
+                startActivity(intent);
+                return true;
         } else {
             Toast.makeText(UserInstallationRequirements.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 }

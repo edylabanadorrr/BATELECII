@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UserInstallationRequirements">
+
+    <item
+        android:id="@+id/menuApplicationForm"
+        android:title="Application Form for Electric Service Connection" />
+
+    <item
+        android:id="@+id/menuRequirementsNewConnection"
+        android:title="Requirements for New Connection" />
+
+</menu>
+
