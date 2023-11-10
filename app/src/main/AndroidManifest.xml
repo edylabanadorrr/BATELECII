@@ -22,9 +22,13 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".UserUploadRequirements"
+            android:name=".UserNewConnectionRequirements"
             android:exported="false"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".UserUploadRequirements"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".AdminSendEmail"
             android:exported="false"

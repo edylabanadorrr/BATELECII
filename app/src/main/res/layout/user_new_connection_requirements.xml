@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context=".UserNewConnectionRequirements">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textViewHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REQUIREMENTS FOR NEW CONNECTION (Permanent / Temporary)"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/sage_green"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Pre-membership Seminar - Tuesday and Thursday; 8am – 10am (Face to Face)"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textViewHead"
+            android:fontFamily="@font/poppinsmedium"
+            android:justificationMode="inter_word"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textView1"
+            android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Certificate of Final Electrical Inspection / Certificate of Occupancy / Temporary Electrical Permit – CITY ENGINEERING OFFICE"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView1"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView2"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Fire Safety Certificate / Temporary Fire Safety Certificate – BFP"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView2"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView3"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Proof of Ownership - Land Title or Tax Declaration "
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView3"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/textView4.1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Additional: Contract to Sell, HOA Certificate, Deed of Sale, Authority to Move-in, Acceptance of Property, or NOTARIZED Kapahintulutan mula sa may-ari ng lupa "
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView4"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView4.1"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Barangay Clearance or Cedula"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider4"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView5"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Photocopy of Valid I.D. "
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider5"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView6"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. Special Power of Attorney or Notarized Authorization (For Representative)"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider6"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView7"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Secretary Certificate &amp; Notice to Proceed (For Contractors / Companies)"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider7"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView8"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. BAPA Clearance from BAPA Chairman (For BAPA Consumers)"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider8"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView9"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. Certificate from DSWD (Villa sa Riles or VSR)"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider9"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView10"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11. Picture of Service Entrance (Entrada o Abang)"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/divider10"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

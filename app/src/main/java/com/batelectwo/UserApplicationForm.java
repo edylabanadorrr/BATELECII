@@ -135,13 +135,13 @@ public class UserApplicationForm extends AppCompatActivity {
                                 if (role.equals("admin")) {
                                     // Handle actions for Admin role
                                     Intent adminIntent = new Intent(UserApplicationForm.this, UserInstallationRequirements.class);
-                                    adminIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(adminIntent);
+                                    finish();
                                 } else if (role.equals("consumer")) {
                                     // Handle actions for Consumer role
                                     Intent consumerIntent = new Intent(UserApplicationForm.this, UserInstallationRequirements.class);
-                                    consumerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(consumerIntent);
+                                    finish();
                                 } else {
                                     // Handle actions for other roles or roles not defined
                                     Toast.makeText(UserApplicationForm.this, "Unauthorized action for this role", Toast.LENGTH_SHORT).show();

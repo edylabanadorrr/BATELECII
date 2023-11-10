@@ -3,7 +3,6 @@ package com.batelectwo;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -18,25 +17,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class UserInstallationRequirements extends AppCompatActivity {
+public class UserNewConnectionRequirements extends AppCompatActivity {
+
     private FirebaseAuth authProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_installation_requirements);
+        setContentView(R.layout.user_new_connection_requirements);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
-        getSupportActionBar().setTitle("Installation Requirements");
+        getSupportActionBar().setTitle("Requirements for New Connection");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    // Creating Action Bar Menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate menu items
-        getMenuInflater().inflate(R.menu.user_installation_requirements, menu);
-        return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -60,17 +52,17 @@ public class UserInstallationRequirements extends AppCompatActivity {
                             if (role != null) {
                                 if (role.equals("admin")) {
                                     // Handle actions for Admin role
-                                    Intent adminIntent = new Intent(UserInstallationRequirements.this, AdminInterface.class);
-                                    adminIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    Intent adminIntent = new Intent(UserNewConnectionRequirements.this, UserInstallationRequirements.class);
                                     startActivity(adminIntent);
+                                    finish();
                                 } else if (role.equals("consumer")) {
                                     // Handle actions for Consumer role
-                                    Intent consumerIntent = new Intent(UserInstallationRequirements.this, ConsumerInterface.class);
-                                    consumerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    Intent consumerIntent = new Intent(UserNewConnectionRequirements.this, UserInstallationRequirements.class);
                                     startActivity(consumerIntent);
+                                    finish();
                                 } else {
                                     // Handle actions for other roles or roles not defined
-                                    Toast.makeText(UserInstallationRequirements.this, "Unauthorized action for this role", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(UserNewConnectionRequirements.this, "Unauthorized action for this role", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }
@@ -83,16 +75,8 @@ public class UserInstallationRequirements extends AppCompatActivity {
                 });
             }
             return true;
-        } else if (id == R.id.menuApplicationForm) {
-                Intent intent = new Intent(UserInstallationRequirements.this, UserApplicationForm.class);
-                startActivity(intent);
-                return true;
-        } else if (id == R.id.menuRequirementsNewConnection) {
-                Intent intent = new Intent(UserInstallationRequirements.this, UserNewConnectionRequirements.class);
-                startActivity(intent);
-                return true;
         } else {
-            Toast.makeText(UserInstallationRequirements.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UserNewConnectionRequirements.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             return super.onOptionsItemSelected(item);
         }
     }
