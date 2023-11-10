@@ -31,7 +31,7 @@ public class AdminVideos extends AppCompatActivity {
         setContentView(R.layout.admin_videos);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
-        getSupportActionBar().setTitle("Admin Videos");
+        getSupportActionBar().setTitle("BSP Videos");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

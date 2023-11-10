@@ -80,7 +80,7 @@ public class AdminConsumers extends AppCompatActivity {
         setContentView(R.layout.admin_consumers);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
-        getSupportActionBar().setTitle("List of Consumers");
+        getSupportActionBar().setTitle("Registered Consumers");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Initialize Firebase

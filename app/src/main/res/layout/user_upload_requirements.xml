@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_login"
+    tools:context=".UserUploadRequirements">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:context=".UserUploadRequirements"
+        android:scrollbarStyle="outsideOverlay">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewRequirements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please upload your requirements here"
+            android:textAlignment="center"
+            android:layout_below="@id/cooperative_name"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- Button for Choosing Requirement File -->
+
+        <Button
+            android:id="@+id/chooseRequirementFileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRequirements"
+            android:backgroundTint="@color/sage_green"
+            android:text="Choose File"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- Where the uploaded picture shows -->
+
+        <ImageView
+            android:id="@+id/imageViewRequirementFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_below="@id/chooseRequirementFileButton" />
+
+        <!-- Button for Uploading of Requirement File -->
+
+        <Button
+            android:id="@+id/uploadRequirementFileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewRequirementFile"
+            android:text="Upload Requirement"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Progress Bar -->
+
+        <ProgressBar
+            android:id="@+id/progressBarShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

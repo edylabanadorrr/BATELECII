@@ -43,7 +43,7 @@ public class AdminInterface extends AppCompatActivity {
         setContentView(R.layout.admin_interface);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
-        getSupportActionBar().setTitle("Admin Interface");
+        getSupportActionBar().setTitle("Billing Section Personnel Interface");
 
         swipeToRefresh();
 

@@ -56,7 +56,7 @@ public class AdminProfile extends AppCompatActivity {
         setContentView(R.layout.admin_profile);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Admin Profile");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("BSP Profile");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

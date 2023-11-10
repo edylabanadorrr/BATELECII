@@ -3,6 +3,7 @@ package com.batelectwo;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -28,6 +29,14 @@ public class UserRecruitmentProcess extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Recruitment Process");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    // Creating Action Bar Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu items
+        getMenuInflater().inflate(R.menu.user_upload_requirements, menu);
+        return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -74,7 +83,12 @@ public class UserRecruitmentProcess extends AppCompatActivity {
                 });
             }
             return true;
-        } else {
+        } else if (id == R.id.menuRequirementFiles) {
+            Intent intent = new Intent(UserRecruitmentProcess.this, UserUploadRequirements.class);
+            startActivity(intent);
+            return true;
+        }
+        else {
             Toast.makeText(UserRecruitmentProcess.this, "Something went wrong", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);

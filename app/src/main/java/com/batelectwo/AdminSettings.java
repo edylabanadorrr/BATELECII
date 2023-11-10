@@ -28,7 +28,7 @@ public class AdminSettings extends AppCompatActivity {
         setContentView(R.layout.admin_settings);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
-        getSupportActionBar().setTitle("Admin Settings");
+        getSupportActionBar().setTitle("BSP Settings");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
