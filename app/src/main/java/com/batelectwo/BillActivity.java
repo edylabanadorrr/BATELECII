@@ -37,6 +37,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -49,10 +50,14 @@ import java.util.Locale;
 
 import lecho.lib.hellocharts.model.Axis;
 import lecho.lib.hellocharts.model.AxisValue;
+import lecho.lib.hellocharts.model.Column;
+import lecho.lib.hellocharts.model.ColumnChartData;
 import lecho.lib.hellocharts.model.Line;
 import lecho.lib.hellocharts.model.LineChartData;
 import lecho.lib.hellocharts.model.PointValue;
+import lecho.lib.hellocharts.model.SubcolumnValue;
 import lecho.lib.hellocharts.model.Viewport;
+import lecho.lib.hellocharts.view.ColumnChartView;
 import lecho.lib.hellocharts.view.LineChartView;
 
 public class BillActivity extends AppCompatActivity {
@@ -77,63 +82,6 @@ public class BillActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Bill");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // Find the chart view
-        LineChartView chart = findViewById(R.id.chart);
-
-        // Prepare data for the chart
-        List<Line> lines = new ArrayList<>();
-        List<AxisValue> axisValues = new ArrayList<>();
-        List<PointValue> values = new ArrayList<>();
-        values.add(new PointValue(6, 2));
-        values.add(new PointValue(7, 4));
-        values.add(new PointValue(8, 3));
-        values.add(new PointValue(9, 5));
-        values.add(new PointValue(10, 7));
-        values.add(new PointValue(11, 5));
-        // Add more values as needed
-
-        // Customize the chart data and appearance
-        Line line = new Line(values)
-                .setColor(Color.RED)
-                .setCubic(true);
-        lines.add(line);
-
-        LineChartData data = new LineChartData();
-        data.setLines(lines);
-
-        // Define the X-axis labels
-        axisValues.add(new AxisValue(0).setLabel("Jan"));
-        axisValues.add(new AxisValue(1).setLabel("Feb"));
-        axisValues.add(new AxisValue(2).setLabel("Mar"));
-        axisValues.add(new AxisValue(3).setLabel("Apr"));
-        axisValues.add(new AxisValue(4).setLabel("May"));
-        axisValues.add(new AxisValue(5).setLabel("June"));
-        axisValues.add(new AxisValue(6).setLabel("July"));
-        axisValues.add(new AxisValue(7).setLabel("Aug"));
-        axisValues.add(new AxisValue(8).setLabel("Sept"));
-        axisValues.add(new AxisValue(9).setLabel("Oct"));
-        axisValues.add(new AxisValue(10).setLabel("Nov"));
-        axisValues.add(new AxisValue(11).setLabel("Dec"));
-
-        Axis axisX = new Axis();
-        axisX.setName("Months");
-        axisX.setTextSize(12);
-        axisX.setValues(axisValues);
-
-        Axis axisY = new Axis().setHasLines(true);
-        data.setAxisXBottom(axisX);
-        data.setAxisYLeft(axisY);
-
-        chart.setLineChartData(data);
-
-        // Customize the viewport and other settings
-        Viewport v = new Viewport(chart.getMaximumViewport());
-        v.top = 10; // Set the maximum Y value
-        v.bottom = 0; // Set the minimum Y value
-        chart.setMaximumViewport(v);
-        chart.setCurrentViewport(v);
-
 
         // Get the current date and time
         Date currentDate = new Date();
@@ -246,7 +194,7 @@ public class BillActivity extends AppCompatActivity {
                                 .load(uri)
                                 .placeholder(R.drawable.no_receipt)  // Placeholder image while loading
                                 .error(R.drawable.no_receipt)  // Image to display in case of error
-                                .into(imageViewInvoice, new com.squareup.picasso.Callback() {
+                                .into(imageViewInvoice, new Callback() {
                                     @Override
                                     public void onSuccess() {
                                         Log.d(TAG, "Image loaded successfully");
@@ -354,6 +302,160 @@ public class BillActivity extends AppCompatActivity {
             }
         });
 
+        // Consumption Graph
+
+        Button consumptionGraphButton = findViewById(R.id.consumptionGraph);
+        consumptionGraphButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Inflate the alert dialog layout
+                View dialogViewConsumption = LayoutInflater.from(BillActivity.this).inflate(R.layout.monthly_consumption_alert, null);
+
+                // Find the chart view
+                LineChartView chart = dialogViewConsumption.findViewById(R.id.chart);
+
+                // Create the alert dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(BillActivity.this);
+                builder.setView(dialogViewConsumption);
+
+                // Create and show the dialog
+                final AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+                // Prepare data for the chart
+                List<Line> lines = new ArrayList<>();
+                List<AxisValue> axisValues = new ArrayList<>();
+                List<PointValue> values = new ArrayList<>();
+                values.add(new PointValue(6, 2));
+                values.add(new PointValue(7, 4));
+                values.add(new PointValue(8, 3));
+                values.add(new PointValue(9, 5));
+                values.add(new PointValue(10, 7));
+                values.add(new PointValue(11, 5));
+                // Add more values as needed
+
+                // Customize the chart data and appearance
+                Line line = new Line(values)
+                        .setColor(Color.RED)
+                        .setStrokeWidth(3)
+                        .setPointRadius(6)
+                        .setHasPoints(true)
+                        .setCubic(false);
+
+                lines.add(line);
+
+                LineChartData data = new LineChartData();
+                data.setLines(lines);
+
+                // Define the X-axis labels
+                axisValues.add(new AxisValue(0).setLabel("Jan"));
+                axisValues.add(new AxisValue(1).setLabel("Feb"));
+                axisValues.add(new AxisValue(2).setLabel("Mar"));
+                axisValues.add(new AxisValue(3).setLabel("Apr"));
+                axisValues.add(new AxisValue(4).setLabel("May"));
+                axisValues.add(new AxisValue(5).setLabel("June"));
+                axisValues.add(new AxisValue(6).setLabel("July"));
+                axisValues.add(new AxisValue(7).setLabel("Aug"));
+                axisValues.add(new AxisValue(8).setLabel("Sept"));
+                axisValues.add(new AxisValue(9).setLabel("Oct"));
+                axisValues.add(new AxisValue(10).setLabel("Nov"));
+                axisValues.add(new AxisValue(11).setLabel("Dec"));
+
+                Axis axisX = new Axis();
+                axisX.setName("Months");
+                axisX.setTextSize(12);
+                axisX.setValues(axisValues);
+
+                Axis axisY = new Axis().setHasLines(true);
+                data.setAxisXBottom(axisX);
+                data.setAxisYLeft(axisY);
+
+                chart.setLineChartData(data);
+
+                // Customize the viewport and other settings
+                Viewport v = new Viewport(chart.getMaximumViewport());
+                v.top = 10; // Set the maximum Y value
+                v.bottom = 0; // Set the minimum Y value
+                chart.setMaximumViewport(v);
+                chart.setCurrentViewport(v);
+            }
+        });
+
+        // Bill History
+
+        Button bilLHistoryButton = findViewById(R.id.billHistory);
+        bilLHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Inflate the alert dialog layout
+                View dialogViewBillHistory = LayoutInflater.from(BillActivity.this).inflate(R.layout.bill_history_alert, null);
+
+                // Find the chart view
+                ColumnChartView billHistoryGraph = dialogViewBillHistory.findViewById(R.id.barGraph);
+
+                // Prepare data for the chart
+                List<Column> columns = new ArrayList<>();
+                List<AxisValue> axisValues = new ArrayList<>();
+
+                // Example data for each month
+                String[] months = {"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+
+                int[] staticValues = {2, 4, 6, 3, 7, 10};
+
+                for (int i = 0; i < months.length; i++) {
+                    List<SubcolumnValue> values = new ArrayList<>();
+                    float billAmount = staticValues[i];
+
+                    // Set color based on value
+                    if (billAmount <= 4) {
+                        values.add(new SubcolumnValue(billAmount, Color.RED));
+                    } else if (billAmount >= 5) {
+                        values.add(new SubcolumnValue(billAmount, Color.BLUE));
+                    }
+
+                    Column column = new Column(values);
+                    columns.add(column);
+
+                    // Add axis values for each month
+                    axisValues.add(new AxisValue(i).setLabel(months[i]));
+                }
+
+                // Create the data object and set it to the chart
+                ColumnChartData data = new ColumnChartData(columns);
+
+                // Customize the X-axis labels
+                Axis axisX = new Axis();
+                axisX.setValues(axisValues);
+                data.setAxisXBottom(axisX);
+
+                // Customize the Y-axis labels
+                Axis axisY = new Axis().setHasLines(true);
+
+                // Set custom values for Y-axis labels
+                List<AxisValue> yValues = new ArrayList<>();
+                yValues.add(new AxisValue(0).setLabel("0"));
+                yValues.add(new AxisValue(2).setLabel("2"));
+                yValues.add(new AxisValue(4).setLabel("4"));
+                yValues.add(new AxisValue(6).setLabel("6"));
+                yValues.add(new AxisValue(8).setLabel("8"));
+                yValues.add(new AxisValue(10).setLabel("10"));
+
+                axisY.setValues(yValues);
+                data.setAxisYLeft(axisY);
+
+                billHistoryGraph.setColumnChartData(data);
+
+                // Create the alert dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(BillActivity.this);
+                builder.setView(dialogViewBillHistory);
+
+                // Create and show the dialog
+                final AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.bill_bottom);
 
@@ -385,6 +487,11 @@ public class BillActivity extends AppCompatActivity {
         });
     }
 
+    // Method to generate random bill amounts for demonstration purposes
+    private float getRandomBillAmount() {
+        return (float) (Math.random() * 1000); // Adjust the range as needed
+    }
+
     private void showAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(BillActivity.this);
         builder.setTitle(Html.fromHtml("<font color='#FF5733'>Bill Notice</font>"));
@@ -408,7 +515,7 @@ public class BillActivity extends AppCompatActivity {
         // Example code to return a hardcoded date:
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         try {
-            return sdf.parse("2023-11-20"); // Change this to your actual deadline date
+            return sdf.parse("2024-11-20"); // Change this to your actual deadline date
         } catch (ParseException e) {
             e.printStackTrace();
             return null; // Return null if parsing fails
