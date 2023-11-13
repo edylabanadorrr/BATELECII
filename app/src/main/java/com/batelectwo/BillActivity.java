@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -487,6 +488,14 @@ public class BillActivity extends AppCompatActivity {
         });
     }
 
+    // Creating Action Bar Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate menu items
+        getMenuInflater().inflate(R.menu.user_other_accounts_bill, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     // Method to generate random bill amounts for demonstration purposes
     private float getRandomBillAmount() {
         return (float) (Math.random() * 1000); // Adjust the range as needed
@@ -515,7 +524,7 @@ public class BillActivity extends AppCompatActivity {
         // Example code to return a hardcoded date:
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         try {
-            return sdf.parse("2024-11-20"); // Change this to your actual deadline date
+            return sdf.parse("2024-01-05"); // Change this to your actual deadline date
         } catch (ParseException e) {
             e.printStackTrace();
             return null; // Return null if parsing fails
@@ -691,6 +700,10 @@ public class BillActivity extends AppCompatActivity {
                     }
                 });
             }
+            return true;
+        } else if (id == R.id.menuOtherAccounts) {
+            Intent intent = new Intent(BillActivity.this, UserOtherAccounts.class);
+            startActivity(intent);
             return true;
         } else {
             Toast.makeText(BillActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();

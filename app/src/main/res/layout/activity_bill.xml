@@ -69,7 +69,7 @@
             android:id="@+id/textViewPleasePay"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Please pay your bills before November 20, 2023"
+            android:text="Please pay your bills before January 05, 2024"
             android:layout_below="@id/myBillHead"
             android:layout_marginTop="5dp"
             android:textAlignment="center"

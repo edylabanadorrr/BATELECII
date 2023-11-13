@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context=".UserOtherAccounts">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter your other account's credentials to access your bills"
+            android:layout_below="@id/cooperative_name"
+            android:fontFamily="@font/poppinsbold"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <!-- Account Number -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:layout_marginTop="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/head"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/border"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:hint="Account Number"
+                android:padding="20dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/gray2"
+                android:textColorHint="@color/blurryblack"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Username -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:layout_marginTop="130dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_below="@id/loginAccountNumber"
+                android:background="@drawable/border"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:hint="Username"
+                android:padding="20dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="@color/gray2"
+                android:textColorHint="@color/blurryblack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:backgroundTint="#B8B034"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/head"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="@string/login_text" />
+
+        <!-- Progress Bar -->
+
+        <ProgressBar
+            android:id="@+id/progressBarShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="100dp"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
