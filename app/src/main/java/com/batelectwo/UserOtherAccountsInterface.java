@@ -3,7 +3,9 @@ package com.batelectwo;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 public class UserOtherAccountsInterface extends AppCompatActivity {
 
     private FirebaseAuth authProfile;
+    private String userUid, userAccountNumber, userUsername;
+    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,63 @@ public class UserOtherAccountsInterface extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Other Account");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        authProfile = FirebaseAuth.getInstance();
+        firebaseUser = authProfile.getCurrentUser();
+
+        // Retrieve extras from Intent
+        Intent intent = getIntent();
+        if (intent != null) {
+            userUid = intent.getStringExtra("USER_UID");
+            TextView textViewUserUid = findViewById(R.id.textViewUserID);
+            textViewUserUid.setText(userUid);
+        }
+
+        if (TextUtils.isEmpty(userUid)) {
+            // Handle the case where userUid is not available
+            // For example, show an error message and return
+            Toast.makeText(this, "User information not available", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+
+        // Use userUid to fetch user information from the database
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance()
+                .getReference("Registered Users")
+                .child(userUid);
+
+        databaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // Assuming "accountNumber" is the key for the account number in your database
+                    String userAccountNumber = dataSnapshot.child("accountNumber").getValue(String.class);
+
+                    // Set User Account Number on Text View
+                    TextView textViewUserAccountNumber = findViewById(R.id.textViewAccountNumber);
+                    textViewUserAccountNumber.setText(userAccountNumber);
+
+                    String userBillAmount = dataSnapshot.child("bill").getValue(String.class);
+
+                    // Set User Bill Amount on Text View
+                    TextView textViewUserBillAmount = findViewById(R.id.myBill);
+                    textViewUserBillAmount.setText(userBillAmount);
+                } else {
+                    // Handle the case where the data does not exist
+                    // For example, set a default value or show an error message
+                    Toast.makeText(UserOtherAccountsInterface.this, "User information not found", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Handle database error
+                Toast.makeText(UserOtherAccountsInterface.this, "Database error", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
+
     // When any menu item is selected
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

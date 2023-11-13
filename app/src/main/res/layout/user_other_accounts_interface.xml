@@ -32,9 +32,18 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/textViewNotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Note: This is just to check your other account's bill. If you want to see the full detailed bill, please login their credentials in our login page."/>
+
+            <TextView
                 android:id="@+id/textViewUserIDHead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/textViewNotice"
                 android:fontFamily="@font/poppinsbold"
                 android:text="User ID"/>
 
@@ -74,6 +83,7 @@
                 android:textSize="16sp" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayoutFullBill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

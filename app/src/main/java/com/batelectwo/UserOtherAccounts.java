@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -28,6 +28,7 @@ public class UserOtherAccounts extends AppCompatActivity {
     private TextInputEditText TextInputEditTextLoginAccountNumber, TextInputEditTextLoginUsername;
     private ProgressBar progressBar;
     private FirebaseUser firebaseUser;
+    private String userUid, userAccountNumber, userUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +45,29 @@ public class UserOtherAccounts extends AppCompatActivity {
         authProfile = FirebaseAuth.getInstance();
 
         // Login User
-        Button loginButton = findViewById(R.id.loginButton);
+        /* Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textAccountNumber = TextInputEditTextLoginAccountNumber.getText().toString();
+                String textUsername = TextInputEditTextLoginUsername.getText().toString();
+
+                if (TextUtils.isEmpty(textAccountNumber)) {
+                    TextInputEditTextLoginAccountNumber.setError("Account Number is required");
+                    TextInputEditTextLoginAccountNumber.requestFocus();
+                } else if (TextUtils.isEmpty(textUsername)) {
+                    TextInputEditTextLoginUsername.setError("Username is required");
+                    TextInputEditTextLoginUsername.requestFocus();
+                } else {
+                    progressBar.setVisibility(View.VISIBLE);
+                    loginUser(textAccountNumber, textUsername);
+                }
+            }
+        }); */
+
+        // Login User
+        ImageButton nextButton = findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String textAccountNumber = TextInputEditTextLoginAccountNumber.getText().toString();
@@ -79,9 +101,17 @@ public class UserOtherAccounts extends AppCompatActivity {
 
                         if (storedUsername != null && storedUsername.equals(username)) {
                             // Username is correct
-                            Intent intent = new Intent(UserOtherAccounts.this, UserOtherAccountsInterface.class);
-                            startActivity(intent);
-                            finish();
+                            String role = userSnapshot.child("role").getValue(String.class);
+
+                            if (role != null) {
+                                // Get the userUid from the snapshot
+                                String newUserUid = userSnapshot.getKey();
+
+                                // Pass the newUserUid to UserOtherAccountsInterface
+                                Intent intent = new Intent(UserOtherAccounts.this, UserOtherAccountsInterface.class);
+                                intent.putExtra("USER_UID", newUserUid);
+                                startActivity(intent);
+                                finish();
                             /*
                             String role = userSnapshot.child("role").getValue(String.class);
 
@@ -111,20 +141,21 @@ public class UserOtherAccounts extends AppCompatActivity {
                                                 }
                                         });
                             } */
+                            } else {
+                                // Incorrect username
+                                // Handle username mismatch
+                                progressBar.setVisibility(View.GONE);
+                                TextInputEditTextLoginAccountNumber.setError("Invalid credentials");
+                                TextInputEditTextLoginAccountNumber.requestFocus();
+                            }
                         } else {
-                            // Incorrect username
-                            // Handle username mismatch
+                            // Account number does not exist
+                            // Handle invalid account number
                             progressBar.setVisibility(View.GONE);
-                            TextInputEditTextLoginAccountNumber.setError("Invalid credentials");
+                            TextInputEditTextLoginAccountNumber.setError("Invalid Credentials");
                             TextInputEditTextLoginAccountNumber.requestFocus();
                         }
                     }
-                } else {
-                    // Account number does not exist
-                    // Handle invalid account number
-                    progressBar.setVisibility(View.GONE);
-                    TextInputEditTextLoginAccountNumber.setError("Account number does not exist");
-                    TextInputEditTextLoginAccountNumber.requestFocus();
                 }
             }
 
@@ -134,8 +165,6 @@ public class UserOtherAccounts extends AppCompatActivity {
             }
         });
     }
-
-
 
     // When any menu item is selected
     @Override
@@ -169,7 +198,6 @@ public class UserOtherAccounts extends AppCompatActivity {
                                     Toast.makeText(UserOtherAccounts.this, "Unauthorized action for this role", Toast.LENGTH_SHORT).show();
                                     return;
                                 }
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                                 finish();
                             }
