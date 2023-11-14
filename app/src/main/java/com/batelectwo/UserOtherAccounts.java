@@ -96,6 +96,8 @@ public class UserOtherAccounts extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     // Account number exists, now check the username
+                    boolean usernameFound = false;
+
                     for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                         String storedUsername = userSnapshot.child("username").getValue(String.class);
 
@@ -112,50 +114,25 @@ public class UserOtherAccounts extends AppCompatActivity {
                                 intent.putExtra("USER_UID", newUserUid);
                                 startActivity(intent);
                                 finish();
-                            /*
-                            String role = userSnapshot.child("role").getValue(String.class);
-
-                            if (role != null) {
-                                String userId = userSnapshot.getKey();
-
-                                // Sign in with the user ID
-                                authProfile.signInWithEmailAndPassword(userId + "@example.com", "") // Use a dummy password or leave it empty
-                                        .addOnCompleteListener(UserOtherAccounts.this, new OnCompleteListener<AuthResult>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                                    // Authentication successful
-
-                                                    // Start the appropriate activity based on the user's role
-
-                                                    if (role.equals("admin")) {
-                                                        Intent intentAdmin = new Intent(UserOtherAccounts.this, AdminInterface.class);
-                                                        startActivity(intentAdmin);
-                                                    } else if (role.equals("consumer")) {
-                                                        Intent intentUser = new Intent(UserOtherAccounts.this, AdminInterface.class);
-                                                        startActivity(intentUser);
-                                                    } else {
-                                                        Toast.makeText(UserOtherAccounts.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-                                                    }
-
-                                                    finish(); // Close login interface
-                                                }
-                                        });
-                            } */
+                                usernameFound = true;
+                                break;
                             } else {
-                                // Incorrect username
-                                // Handle username mismatch
-                                progressBar.setVisibility(View.GONE);
-                                TextInputEditTextLoginAccountNumber.setError("Invalid credentials");
-                                TextInputEditTextLoginAccountNumber.requestFocus();
+                                // Handle role not found
                             }
-                        } else {
-                            // Account number does not exist
-                            // Handle invalid account number
-                            progressBar.setVisibility(View.GONE);
-                            TextInputEditTextLoginAccountNumber.setError("Invalid Credentials");
-                            TextInputEditTextLoginAccountNumber.requestFocus();
                         }
                     }
+
+                    // Check if the username was not found in any iteration
+                    if (!usernameFound) {
+                        progressBar.setVisibility(View.GONE);
+                        TextInputEditTextLoginAccountNumber.setError("Invalid Credentials");
+                        TextInputEditTextLoginAccountNumber.requestFocus();
+                    }
+                } else {
+                    // Handle invalid account number
+                    progressBar.setVisibility(View.GONE);
+                    TextInputEditTextLoginAccountNumber.setError("Invalid Account Number");
+                    TextInputEditTextLoginAccountNumber.requestFocus();
                 }
             }
 
@@ -165,6 +142,7 @@ public class UserOtherAccounts extends AppCompatActivity {
             }
         });
     }
+
 
     // When any menu item is selected
     @Override
