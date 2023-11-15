@@ -1,7 +1,6 @@
 package com.batelectwo;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -42,11 +41,13 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public class AdminConsumers extends AppCompatActivity {
 
@@ -645,7 +646,7 @@ public class AdminConsumers extends AppCompatActivity {
 
             // Check if it's been long enough since the last bill update for this consumer
             Consumer selectedConsumer = findConsumerByFirstName(updatedFirstName);
-            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            /* SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
             String consumerKey = selectedConsumer.getUserUid(); // Use a unique identifier for the consumer
 
             long lastUpdateTimeMillis = sharedPreferences.getLong(consumerKey, 0);
@@ -669,7 +670,7 @@ public class AdminConsumers extends AppCompatActivity {
             // After a successful update, update the last update time for this consumer
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putLong(consumerKey, currentTimeMillis);
-            editor.apply();
+            editor.apply(); */
 
             // Check if an image was selected
             if (uriImage != null) {
@@ -695,9 +696,9 @@ public class AdminConsumers extends AppCompatActivity {
                                 updateConsumerData(updatedFirstName, updatedLastName, updatedBill, updatedAddress, updatedContactNumber, updatedUsername, imageUrl.toString());
 
                                 // After a successful update, update the last update time for this consumer
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                /* SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putLong(consumerKey + "_lastUpdateTimeMillis", currentTimeMillis);
-                                editor.apply();
+                                editor.apply(); */
                             }
                         });
                     }
@@ -748,6 +749,14 @@ public class AdminConsumers extends AppCompatActivity {
             Log.d(TAG, "Updated Contact Number: " + updatedContactNumber);
             Log.d(TAG, "Updated Username: " + updatedUsername);
 
+            // Get current timestamp in the desired format
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale.getDefault());
+            String formattedTimestamp = sdf.format(new Date());
+
+            // Extract month and year from the timestamp
+            String[] parts = formattedTimestamp.split(" ");
+            String[] dateParts = parts[0].split("/");
+            String monthYear = dateParts[0] + "_" + dateParts[2]; // Format: MM_YYYY
 
             // Update the consumer's details in Firebase
             DatabaseReference consumerRef = FirebaseDatabase.getInstance().getReference("Registered Users")
@@ -760,6 +769,7 @@ public class AdminConsumers extends AppCompatActivity {
             updatedValues.put("address", updatedAddress);
             updatedValues.put("contactNumber", updatedContactNumber);
             updatedValues.put("username", updatedUsername);
+            updatedValues.put("timestamp", formattedTimestamp);
 
 
             if (imageUrl != null) {
@@ -771,6 +781,19 @@ public class AdminConsumers extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
+                                // If the update under "Registered Users" node is successful, also add to "BillHistory" node
+                                DatabaseReference billHistoryRef = FirebaseDatabase.getInstance().getReference("BillHistory")
+                                        .child(selectedConsumerUid)
+                                        .child(monthYear);
+
+                                Map<String, Object> billHistoryValues = new HashMap<>();
+                                billHistoryValues.put("firstName", updatedFirstName);
+                                billHistoryValues.put("lastName", updatedLastName);
+                                billHistoryValues.put("timestamp", formattedTimestamp);
+                                billHistoryValues.put("bill", updatedBill);
+
+                                billHistoryRef.setValue(billHistoryValues);
+
                                 progressBar.setVisibility(View.VISIBLE);
                                 Toast.makeText(AdminConsumers.this, "Consumer details updated successfully.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(AdminConsumers.this, AdminInterface.class);

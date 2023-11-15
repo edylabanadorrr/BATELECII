@@ -382,138 +382,111 @@ public class BillActivity extends AppCompatActivity {
             }
         });
 
+        // Bill History
+
         Button bilLHistoryButton = findViewById(R.id.billHistory);
         bilLHistoryButton.setOnClickListener(new View.OnClickListener() {
-                                                 @Override
-                                                 public void onClick(View view) {
-                                                     // Inflate the alert dialog layout
-                                                     View dialogViewBillHistory = LayoutInflater.from(BillActivity.this).inflate(R.layout.bill_history_alert, null);
+            @Override
+            public void onClick(View view) {
+                // Inflate the alert dialog layout
+                View dialogViewBillHistory = LayoutInflater.from(BillActivity.this).inflate(R.layout.bill_history_alert, null);
 
-                                                     // Find the chart view
-                                                     ColumnChartView billHistoryGraph = dialogViewBillHistory.findViewById(R.id.barGraph);
+                // Find the chart view
+                ColumnChartView billHistoryGraph = dialogViewBillHistory.findViewById(R.id.barGraph);
 
-                                                     // Prepare data for the chart
-                                                     List<Column> columns = new ArrayList<>();
-                                                     List<AxisValue> axisValues = new ArrayList<>();
+                // Prepare data for the chart
+                List<Column> columns = new ArrayList<>();
+                List<AxisValue> axisValues = new ArrayList<>();
 
-                                                     // Retrieve data from your "BillHistory" node (replace "user1" with the actual user ID)
-                                                     FirebaseAuth auth = FirebaseAuth.getInstance();
-                                                     FirebaseUser firebaseUser = auth.getCurrentUser();
+                // Example data for each month
+                String[] months = {"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
-                                                     String userId = firebaseUser.getUid();
-                                                     DatabaseReference billHistoryRef = FirebaseDatabase.getInstance().getReference("BillHistory").child(userId);
+                int[] staticValues = {2, 4, 6, 3, 7, 10};
 
-                                                     billHistoryRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                                                         @Override
-                                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                                             if (dataSnapshot.exists()) {
-                                                                 for (DataSnapshot monthSnapshot : dataSnapshot.getChildren()) {
-                                                                     String monthYear = monthSnapshot.getKey(); // Assuming the key is the monthYear format
+                for (int i = 0; i < months.length; i++) {
+                    List<SubcolumnValue> values = new ArrayList<>();
+                    float billAmount = staticValues[i];
 
-                                                                     // Check if "bill" exists under each month
-                                                                     if (monthSnapshot.hasChild("bill")) {
-                                                                         String billAmountStr = monthSnapshot.child("bill").getValue(String.class);
-
-                                                                         // Check if the "bill" value is not null and not empty before further processing
-                                                                         if (billAmountStr != null && !billAmountStr.isEmpty()) {
-                                                                             // Convert the billAmountStr to a Float if needed
-                                                                             Float billAmount = Float.valueOf(billAmountStr);
-
-                                                                             List<SubcolumnValue> values = new ArrayList<>();
-
-                                                                             // Set color based on value
-                                                                             if (billAmount <= 4) {
-                                                                                 values.add(new SubcolumnValue(billAmount, Color.RED));
-                                                                             } else if (billAmount >= 5) {
-                                                                                 values.add(new SubcolumnValue(billAmount, Color.BLUE));
-                                                                             }
-
-                                                                             Column column = new Column(values);
-                                                                             columns.add(column);
-
-                                                                             // Add a single axis value for each month
-                                                                             axisValues.add(new AxisValue(axisValues.size()).setLabel(monthYear));
-                                                                         } else {
-                                                                             // Handle the case where "bill" is null or empty, if needed
-                                                                             Log.e("BillActivity", "Bill amount is null or empty for month: " + monthYear);
-                                                                         }
-                                                                     }
-                                                                 }
-
-                                                                 // Create the data object and set it to the chart
-                                                                 ColumnChartData data = new ColumnChartData(columns);
-
-                                                                 // Customize the X-axis labels
-                                                                 Axis axisX = new Axis();
-                                                                 axisX.setValues(axisValues);
-                                                                 data.setAxisXBottom(axisX);
-
-                                                                 // Customize the Y-axis labels
-                                                                 Axis axisY = new Axis().setHasLines(true);
-
-                                                                 // Set custom values for Y-axis labels
-                                                                 List<AxisValue> yValues = new ArrayList<>();
-                                                                 yValues.add(new AxisValue(0).setLabel("0"));
-                                                                 yValues.add(new AxisValue(100).setLabel("100"));
-                                                                 yValues.add(new AxisValue(200).setLabel("200"));
-                                                                 yValues.add(new AxisValue(300).setLabel("300"));
-                                                                 yValues.add(new AxisValue(400).setLabel("400"));
-                                                                 yValues.add(new AxisValue(500).setLabel("500"));
-
-                                                                 axisY.setValues(yValues);
-                                                                 data.setAxisYLeft(axisY);
-
-                                                                 billHistoryGraph.setColumnChartData(data);
-
-                                                                 // Create the alert dialog
-                                                                 AlertDialog.Builder builder = new AlertDialog.Builder(BillActivity.this);
-                                                                 builder.setView(dialogViewBillHistory);
-
-                                                                 // Create and show the dialog
-                                                                 final AlertDialog alertDialog = builder.create();
-                                                                 alertDialog.show();
-                                                             }
-                                                         }
-
-                                                         @Override
-                                                         public void onCancelled(@NonNull DatabaseError databaseError) {
-                                                             // Handle database error
-                                                         }
-                                                     });
-                                                 }
-                                             });
-
-                BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-                bottomNavigationView.setSelectedItemId(R.id.bill_bottom);
-
-                bottomNavigationView.setOnItemSelectedListener(item -> {
-                    int itemId = item.getItemId();
-
-                    if (itemId == R.id.home_bottom) {
-                        Intent intent = new Intent(BillActivity.this, ConsumerInterface.class);
-                        startActivity(intent);
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                        finish();
-                        return true;
-                    } else if (itemId == R.id.bill_bottom) {
-                        return true;
-                    } else if (itemId == R.id.videos_bottom) {
-                        Intent intent = new Intent(BillActivity.this, VideoActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                        finish();
-                        return true;
-                    } else if (itemId == R.id.profile_bottom) {
-                        Intent intent = new Intent(BillActivity.this, UserProfile.class);
-                        startActivity(intent);
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                        finish();
-                        return true;
+                    // Set color based on value
+                    if (billAmount <= 4) {
+                        values.add(new SubcolumnValue(billAmount, Color.RED));
+                    } else if (billAmount >= 5) {
+                        values.add(new SubcolumnValue(billAmount, Color.BLUE));
                     }
-                    return false;
-                });
-            }
 
+                    Column column = new Column(values);
+                    columns.add(column);
+
+                    // Add axis values for each month
+                    axisValues.add(new AxisValue(i).setLabel(months[i]));
+                }
+
+                // Create the data object and set it to the chart
+                ColumnChartData data = new ColumnChartData(columns);
+
+                // Customize the X-axis labels
+                Axis axisX = new Axis();
+                axisX.setValues(axisValues);
+                data.setAxisXBottom(axisX);
+
+                // Customize the Y-axis labels
+                Axis axisY = new Axis().setHasLines(true);
+
+                // Set custom values for Y-axis labels
+                List<AxisValue> yValues = new ArrayList<>();
+                yValues.add(new AxisValue(0).setLabel("0"));
+                yValues.add(new AxisValue(2).setLabel("2"));
+                yValues.add(new AxisValue(4).setLabel("4"));
+                yValues.add(new AxisValue(6).setLabel("6"));
+                yValues.add(new AxisValue(8).setLabel("8"));
+                yValues.add(new AxisValue(10).setLabel("10"));
+
+                axisY.setValues(yValues);
+                data.setAxisYLeft(axisY);
+
+                billHistoryGraph.setColumnChartData(data);
+
+                // Create the alert dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(BillActivity.this);
+                builder.setView(dialogViewBillHistory);
+
+                // Create and show the dialog
+                final AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.bill_bottom);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+
+            if (itemId == R.id.home_bottom) {
+                Intent intent = new Intent(BillActivity.this, ConsumerInterface.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (itemId == R.id.bill_bottom) {
+                return true;
+            } else if (itemId == R.id.videos_bottom) {
+                Intent intent = new Intent(BillActivity.this, VideoActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (itemId == R.id.profile_bottom) {
+                Intent intent = new Intent(BillActivity.this, UserProfile.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            }
+            return false;
+        });
+    }
 
     // Creating Action Bar Menu
     @Override
