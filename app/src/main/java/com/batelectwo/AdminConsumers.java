@@ -1,6 +1,7 @@
 package com.batelectwo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -48,6 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class AdminConsumers extends AppCompatActivity {
 
@@ -646,7 +648,7 @@ public class AdminConsumers extends AppCompatActivity {
 
             // Check if it's been long enough since the last bill update for this consumer
             Consumer selectedConsumer = findConsumerByFirstName(updatedFirstName);
-            /* SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
             String consumerKey = selectedConsumer.getUserUid(); // Use a unique identifier for the consumer
 
             long lastUpdateTimeMillis = sharedPreferences.getLong(consumerKey, 0);
@@ -670,14 +672,14 @@ public class AdminConsumers extends AppCompatActivity {
             // After a successful update, update the last update time for this consumer
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putLong(consumerKey, currentTimeMillis);
-            editor.apply(); */
+            editor.apply();
 
             // Check if an image was selected
             if (uriImage != null) {
                 // Generate a unique filename using a timestamp
-            /* SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
             String timestamp = sdf.format(new Date());
-            String fileName = "invoice_" + timestamp + ".jpg"; */
+            String fileName = "invoice_" + timestamp + ".jpg";
 
                 String selectedConsumerUid = selectedConsumer.getUserUid();
 
@@ -696,9 +698,9 @@ public class AdminConsumers extends AppCompatActivity {
                                 updateConsumerData(updatedFirstName, updatedLastName, updatedBill, updatedAddress, updatedContactNumber, updatedUsername, imageUrl.toString());
 
                                 // After a successful update, update the last update time for this consumer
-                                /* SharedPreferences.Editor editor = sharedPreferences.edit();
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putLong(consumerKey + "_lastUpdateTimeMillis", currentTimeMillis);
-                                editor.apply(); */
+                                editor.apply();
                             }
                         });
                     }
@@ -792,7 +794,35 @@ public class AdminConsumers extends AppCompatActivity {
                                 billHistoryValues.put("timestamp", formattedTimestamp);
                                 billHistoryValues.put("bill", updatedBill);
 
+                                // Calculate total consumption
+                                try {
+                                    float totalBill = Float.parseFloat(updatedBill);
+                                    float unitRate = 0.10f; // Replace with the actual unit rate
+
+                                    float totalConsumption = totalBill / unitRate;
+                                    billHistoryValues.put("totalConsumption", totalConsumption);
+                                } catch (NumberFormatException e) {
+                                    e.printStackTrace();
+                                }
+
                                 billHistoryRef.setValue(billHistoryValues);
+
+                                // Add to "Consumption" node
+                                DatabaseReference consumptionRef = FirebaseDatabase.getInstance().getReference("Consumption")
+                                        .child(selectedConsumerUid)
+                                        .child(monthYear);
+
+                                    float totalBill = Float.parseFloat(updatedBill);
+                                    float unitRate = 0.10f; // Replace with the actual unit rate
+
+                                    float totalConsumption = totalBill / unitRate;
+                                    Map<String, Object> consumptionValues = new HashMap<>();
+                                    consumptionValues.put("firstName", updatedFirstName);
+                                    consumptionValues.put("lastName", updatedLastName);
+                                    consumptionValues.put("timestamp", formattedTimestamp);
+                                    consumptionValues.put("totalConsumption", totalConsumption);
+
+                                consumptionRef.setValue(consumptionValues);
 
                                 progressBar.setVisibility(View.VISIBLE);
                                 Toast.makeText(AdminConsumers.this, "Consumer details updated successfully.", Toast.LENGTH_SHORT).show();
