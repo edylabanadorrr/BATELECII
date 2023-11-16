@@ -70,7 +70,6 @@
 
     <!-- Submit Ticket -->
 
-    <!--
     <RelativeLayout
         android:id="@+id/relativeLayoutTicket"
         android:layout_width="match_parent"
@@ -114,12 +113,7 @@
 
     </RelativeLayout>
 
-    -->
-
-
     <!-- Send Feedback -->
-
-    <!--
 
     <RelativeLayout
         android:id="@+id/relativeLayoutFeedback"
@@ -164,15 +158,13 @@
 
     </RelativeLayout>
 
-    -->
-
     <!-- Logout -->
 
     <RelativeLayout
         android:id="@+id/relativeLayoutLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/relativeLayoutAbout"
+        android:layout_below="@id/relativeLayoutFeedback"
         android:padding="10dp"
         android:background="@color/light_gray2">
 

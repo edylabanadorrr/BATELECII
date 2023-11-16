@@ -12,12 +12,12 @@ public class SubmittedTickets {
         // Default constructor required for Firebase Database
     }
 
-    public SubmittedTickets(String inputLocation, String inputIssue, String inputDetails, String userEmail, String userUid) {
-        this.location = inputLocation;
-        this.issue = inputIssue;
-        this.details = inputDetails;
-        this.email = userEmail;
-        this.uid = userUid;
+    public SubmittedTickets(String location, String issue, String details, String email, String uid) {
+        this.uid = uid;
+        this.email = email;
+        this.location = location;
+        this.issue = issue;
+        this.details = details;
     }
 
     public String getLocation() {
@@ -53,5 +53,9 @@ public class SubmittedTickets {
     }
     public void setUid(String uid) {
         this.uid = uid;
+    }
+
+    public String toString() {
+        return "Location: " + location + "\nIssue: " + issue + "\nDetails: " + details + "\nEmail: " + email + "\nUID: " + uid;
     }
 }

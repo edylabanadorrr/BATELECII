@@ -46,7 +46,7 @@ public class AdminSettings extends AppCompatActivity {
 
         // Submitted Tickets Function
 
-        /*
+
         RelativeLayout relativeLayoutTicket = findViewById(R.id.relativeLayoutTicket);
         relativeLayoutTicket.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +55,10 @@ public class AdminSettings extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }); */
+        });
 
         // Sent Feedbacks Function
 
-        /*
         RelativeLayout relativeLayoutFeedback = findViewById(R.id.relativeLayoutFeedback);
         relativeLayoutFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +67,7 @@ public class AdminSettings extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }); */
+        });
 
         // Logout Function
 

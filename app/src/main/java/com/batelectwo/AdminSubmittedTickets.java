@@ -40,7 +40,6 @@ public class AdminSubmittedTickets extends AppCompatActivity {
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Submitted Tickets");
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         swipeToRefresh();
@@ -63,16 +62,40 @@ public class AdminSubmittedTickets extends AppCompatActivity {
                     SubmittedTickets ticket = snapshot.getValue(SubmittedTickets.class);
 
                     // Access the fields directly to display the data in your ListView
+                    String uid = ticket.getUid();
+                    String email = ticket.getEmail();
                     String location = ticket.getLocation();
                     String issue = ticket.getIssue();
                     String details = ticket.getDetails();
-                    String email = ticket.getEmail();
-                    String uid = ticket.getUid();
 
                     // Create a custom object to hold the data for this ticket
-                    TicketListItem ticketItem = new TicketListItem(location, issue, details, email, uid);
+                    TicketListItem ticketItem = new TicketListItem(uid, email, location, issue, details);
 
                     // Add the custom object to your list
+                    ticketList.add(ticket);
+                }
+
+                ticketAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("FirebaseError", "Database read error: " + databaseError.getMessage());
+            }
+        });
+    }
+
+    // New method to fetch and update data
+    private void fetchData() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                ticketList.clear();
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    SubmittedTickets ticket = snapshot.getValue(SubmittedTickets.class);
+
+                    // Add the SubmittedTickets object to your list
                     ticketList.add(ticket);
                 }
 
@@ -96,6 +119,7 @@ public class AdminSubmittedTickets extends AppCompatActivity {
             startActivity(getIntent());
             finish();
             overridePendingTransition(0, 0);
+            fetchData();
             swipeContainer.setRefreshing(false);
         });
 

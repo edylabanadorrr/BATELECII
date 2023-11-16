@@ -7,10 +7,25 @@
     android:background="@color/white"
     tools:context="com.batelectwo.AdminSentFeedbacks">
 
+    <!-- Head -->
+
+    <TextView
+        android:id="@+id/cooperative_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cooperative_name"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#a08b15"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/cooperative_name">
 
         <ListView
             android:id="@+id/listView"
@@ -19,7 +34,35 @@
             android:divider="@android:color/darker_gray"
             android:dividerHeight="1dp"
             android:padding="16dp"
-            android:background="@android:color/white"/>
+            android:background="@drawable/gradient_login"/>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_login"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textUid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UID"/>
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"/>
+
+        <TextView
+            android:id="@+id/textFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback"/>
+
+        </LinearLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </RelativeLayout>

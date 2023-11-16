@@ -39,7 +39,6 @@ public class AdminSentFeedbacks extends AppCompatActivity {
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowish)));
         getSupportActionBar().setTitle("Sent Feedbacks");
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         swipeToRefresh();
@@ -52,15 +51,47 @@ public class AdminSentFeedbacks extends AppCompatActivity {
         // Initialize Firebase database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("Submitted Feedbacks");
 
-        // Read tickets from Firebase Realtime Database
+        // Read feedbacks from Firebase Realtime Database
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 feedbackList.clear();
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    SentFeedbacks feedback = snapshot.getValue(SentFeedbacks.class);
-                    feedbackList.add(feedback);
+                    SentFeedbacks sentFeedback = snapshot.getValue(SentFeedbacks.class);
+
+                    String uid = sentFeedback.getUid();
+                    String email = sentFeedback.getEmail();
+                    String feedback1 = sentFeedback.getFeedback();
+
+                    // Create a custom object to hold the data for this ticket
+                    SubmittedFeedbacks feedbackItem = new SubmittedFeedbacks(uid, email, feedback1);
+
+                    feedbackList.add(sentFeedback);
+                }
+
+                feedbackAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("FirebaseError", "Database read error: " + databaseError.getMessage());
+            }
+        });
+    }
+
+    // New method to fetch and update data
+    private void fetchData() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                feedbackList.clear();
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    SentFeedbacks sentFeedback = snapshot.getValue(SentFeedbacks.class);
+
+                    // Add the sent Feedbacks object to your list
+                    feedbackList.add(sentFeedback);
                 }
 
                 feedbackAdapter.notifyDataSetChanged();
@@ -83,6 +114,7 @@ public class AdminSentFeedbacks extends AppCompatActivity {
             startActivity(getIntent());
             finish();
             overridePendingTransition(0, 0);
+            fetchData();
             swipeContainer.setRefreshing(false);
         });
 

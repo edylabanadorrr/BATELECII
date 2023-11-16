@@ -103,7 +103,7 @@ public class UserTicket extends AppCompatActivity {
             SubmittedTickets newTicket = new SubmittedTickets(inputLocation, inputIssue, inputDetails, userEmail, userUid);
 
             // Push the new ticket to the Firebase Database
-            referenceProfile.push().setValue(newTicket, new DatabaseReference.CompletionListener() {
+            referenceProfile.setValue(newTicket, new DatabaseReference.CompletionListener() {
                 @Override
                 public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                     progressBar.setVisibility(View.GONE);
