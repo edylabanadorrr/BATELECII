@@ -1,4 +1,4 @@
-A final project for courses: # IT 324 - Capstone Project 1 and IT 441 - Capstone Project 2, and to the client # BATELEC II.
+A final project for courses: IT 324 - Capstone Project 1 and IT 441 - Capstone Project 2, and to the client BATELEC II.
 
 # Design and Development of a Mobile Application Information System for BATELEC II
 
