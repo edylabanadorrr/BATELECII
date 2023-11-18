@@ -70,6 +70,9 @@ public class UserApplicationForm extends AppCompatActivity {
                     public void onClick(View view) {
                         // Check if the invoiceBitmap is not null
                         if (applicationFormBitmap != null) {
+                            // Set the bitmap to the ImageView before printing
+                            applicationFormImageView.setImageBitmap(applicationFormBitmap);
+
                             // Print the Application Form
                             printApplicationForm(applicationFormBitmap);
 
