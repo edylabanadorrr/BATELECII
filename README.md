@@ -3,7 +3,7 @@ A final project for courses: IT 324 - Capstone Project 1 and IT 441 - Capstone P
 # Design and Development of a Mobile Application Information System for BATELEC II
 
 The project is mainly for consumers of BATELEC II and BATELEC II employees.
-Relative to this, the application features viewing bill information and managing account information.
+Relative to this, the application mainly features bill inquiry.
 
 Consumers Features:
 1. Manage Account (Update Profile, Update Email, Change Password, Forgot Password, Delete Profile) with Email Verification
