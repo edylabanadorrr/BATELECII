@@ -43,6 +43,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@color/light_gray"
             android:padding="15dp">
 
@@ -50,7 +51,8 @@
                 android:id="@+id/countryLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
                 android:text="Country:"/>
 
             <com.google.android.material.textfield.TextInputEditText
@@ -59,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/countryLabel"
                 android:textAlignment="center"
+                android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:inputType="none"
                 android:focusable="false"
@@ -70,8 +73,8 @@
                 android:id="@+id/applianceLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
-                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginTop="15dp"
                 android:layout_below="@id/editTextPhilippines"
                 android:text="Appliance:"/>
 
@@ -81,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/applianceLabel"
                 android:layout_marginStart="20dp"
+                android:padding="5dp"
                 android:background="@drawable/border"
                 android:layout_below="@id/editTextPhilippines"
                 android:layout_marginTop="10dp"/>
@@ -89,8 +93,8 @@
                 android:id="@+id/powerConsumptionLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
-                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginTop="15dp"
                 android:layout_below="@id/applianceLabel"
                 android:text="Power Consumption:"/>
 
@@ -103,6 +107,7 @@
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
+                android:padding="3dp"
                 android:inputType="none"
                 android:focusable="false"
                 android:clickable="false"
@@ -114,26 +119,29 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/editTextPowerConsumption"
                 android:layout_marginStart="5dp"
+                android:padding="3dp"
                 android:background="@drawable/border"
                 android:layout_below="@id/applianceLabel"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="15dp"/>
 
             <TextView
                 android:id="@+id/hoursLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
-                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginTop="18dp"
                 android:layout_below="@id/powerConsumptionLabel"
                 android:text="Hours of use per day:"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextHours"
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/hoursLabel"
                 android:layout_below="@id/editTextPowerConsumption"
                 android:textAlignment="center"
+                android:padding="5dp"
+                android:inputType="number"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/border"/>
@@ -142,28 +150,29 @@
                 android:id="@+id/hoursPerDayLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_toEndOf="@id/editTextHours"
                 android:layout_below="@id/wattsSpinner"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:text="hr/day"/>
 
             <TextView
                 android:id="@+id/kwhCostLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/poppinsmedium"
                 android:layout_below="@id/hoursLabel"
                 android:text="1 kilowatt-hour (kwH) cost:"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextKwh"
-                android:layout_width="100dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/kwhCostLabel"
                 android:layout_below="@id/editTextHours"
                 android:textAlignment="center"
+                android:padding="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
                 android:inputType="none"
@@ -176,17 +185,18 @@
                 android:id="@+id/pesoLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="25dp"
                 android:layout_toEndOf="@id/editTextKwh"
                 android:layout_below="@id/hoursPerDayLabel"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:text="peso"/>
             
             <Button
                 android:id="@+id/calculateButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
                 android:layout_below="@id/kwhCostLabel"
                 android:text="Calculate"/>
 
@@ -196,6 +206,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/kwhCostLabel"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/calculateButton"
                 android:text="Reset"/>
 
@@ -203,8 +214,8 @@
                 android:id="@+id/electricityPerDayLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsmedium"
                 android:layout_below="@id/calculateButton"
                 android:text="Electricity cost per day:"/>
 
@@ -216,7 +227,8 @@
                 android:layout_below="@id/calculateButton"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="40dp"
+                android:padding="5dp"
                 android:inputType="none"
                 android:focusable="false"
                 android:clickable="false"
@@ -226,8 +238,8 @@
                 android:id="@+id/electricityPerMonthLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppinsmedium"
                 android:layout_below="@id/electricityPerDayLabel"
                 android:text="Electricity cost per month:"/>
 
@@ -239,7 +251,8 @@
                 android:layout_below="@id/editTextElectricityPerDay"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="40dp"
+                android:padding="5dp"
                 android:inputType="none"
                 android:focusable="false"
                 android:clickable="false"
@@ -249,8 +262,8 @@
                 android:id="@+id/electricityPerYearLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppinsmedium"
                 android:layout_below="@id/electricityPerMonthLabel"
                 android:text="Electricity cost per year:"/>
 
@@ -262,6 +275,7 @@
                 android:layout_below="@id/editTextElectricityPerMonth"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
+                android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:inputType="none"
                 android:focusable="false"

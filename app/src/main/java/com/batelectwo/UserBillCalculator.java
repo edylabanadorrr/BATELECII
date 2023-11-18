@@ -3,6 +3,7 @@ package com.batelectwo;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -112,6 +114,16 @@ public class UserBillCalculator extends AppCompatActivity {
                 if (!timeOfUsageText.isEmpty()) {
                     int timeOfUsageHours = Integer.parseInt(timeOfUsageText);
 
+                    if (timeOfUsageHours >= 25) {
+                        // Show an alert dialog for the error
+                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                        builder.setTitle(Html.fromHtml("<font color='#FF0000'>Error</font>"));
+                        builder.setMessage("Please enter a valid time of usage");
+                        builder.setPositiveButton("OK", null);
+                        builder.show();
+                        return; // Exit the onClick method to prevent further calculations
+                    }
+
                     // Get the unit selected in the spinnerWattsKilowatts
                     String selectedUnit = (String) spinnerWattsKilowatts.getSelectedItem();
 
@@ -137,6 +149,14 @@ public class UserBillCalculator extends AppCompatActivity {
                     electricityPerDay.setText(String.valueOf(costPerDay));
                     electricityPerMonth.setText(String.valueOf(costPerMonth));
                     electricityPerYear.setText(String.valueOf(costPerYear));
+                }  else {
+                    // Show an alert dialog for the error
+                    AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                    builder.setTitle(Html.fromHtml("<font color='#FF0000'>Error</font>"));
+                    builder.setMessage("Please fill all the required fields");
+                    builder.setPositiveButton("OK", null);
+                    builder.show();
+                    return; // Exit the onClick method to prevent further calculations
                 }
             }
         });
@@ -227,12 +247,10 @@ public class UserBillCalculator extends AppCompatActivity {
                                 if (role.equals("admin")) {
                                     // Handle actions for Admin role
                                     Intent adminIntent = new Intent(UserBillCalculator.this, AdminInterface.class);
-                                    adminIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(adminIntent);
                                 } else if (role.equals("consumer")) {
                                     // Handle actions for Consumer role
                                     Intent consumerIntent = new Intent(UserBillCalculator.this, BillActivity.class);
-                                    consumerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(consumerIntent);
                                 } else {
                                     // Handle actions for other roles or roles not defined
