@@ -762,6 +762,10 @@ public class BillActivity extends AppCompatActivity {
             Intent intent = new Intent(BillActivity.this, UserOtherAccounts.class);
             startActivity(intent);
             return true;
+        } else if (id == R.id.menuBilLCalculator) {
+            Intent intent = new Intent(BillActivity.this, UserBillCalculator.class);
+            startActivity(intent);
+            return true;
         } else {
             Toast.makeText(BillActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
         }

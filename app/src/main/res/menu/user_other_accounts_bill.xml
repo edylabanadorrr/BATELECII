@@ -7,4 +7,8 @@
         android:id="@+id/menuOtherAccounts"
         android:title="My Other Accounts" />
 
+    <item
+        android:id="@+id/menuBilLCalculator"
+        android:title="Bill Calculator" />
+
 </menu>

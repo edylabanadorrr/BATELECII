@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login"
+    tools:context=".UserBillCalculator">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Relative Layout for the password authentication process -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:padding="15dp">
+
+            <!-- Head -->
+
+            <TextView
+                android:id="@+id/cooperative_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cooperative_name"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="#a08b15"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/countryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Country:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhilippines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/countryLabel"
+                android:textAlignment="center"
+                android:layout_marginStart="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                android:text="Philippines"
+                android:background="@drawable/border"/>
+
+            <TextView
+                android:id="@+id/applianceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/editTextPhilippines"
+                android:text="Appliance:"/>
+
+            <Spinner
+                android:id="@+id/applianceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/applianceLabel"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/border"
+                android:layout_below="@id/editTextPhilippines"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/powerConsumptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/applianceLabel"
+                android:text="Power Consumption:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPowerConsumption"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/powerConsumptionLabel"
+                android:layout_below="@id/applianceSpinner"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/border"/>
+
+            <Spinner
+                android:id="@+id/wattsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/editTextPowerConsumption"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/border"
+                android:layout_below="@id/applianceLabel"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/hoursLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/powerConsumptionLabel"
+                android:text="Hours of use per day:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextHours"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/hoursLabel"
+                android:layout_below="@id/editTextPowerConsumption"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/border"/>
+
+            <TextView
+                android:id="@+id/hoursPerDayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/editTextHours"
+                android:layout_below="@id/wattsSpinner"
+                android:layout_marginStart="20dp"
+                android:text="hr/day"/>
+
+            <TextView
+                android:id="@+id/kwhCostLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_below="@id/hoursLabel"
+                android:text="1 kilowatt-hour (kwH) cost:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextKwh"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/kwhCostLabel"
+                android:layout_below="@id/editTextHours"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                android:text="12"
+                android:background="@drawable/border"/>
+
+            <TextView
+                android:id="@+id/pesoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/editTextKwh"
+                android:layout_below="@id/hoursPerDayLabel"
+                android:layout_marginStart="20dp"
+                android:text="peso"/>
+            
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/kwhCostLabel"
+                android:text="Calculate"/>
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kwhCostLabel"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/calculateButton"
+                android:text="Reset"/>
+
+            <TextView
+                android:id="@+id/electricityPerDayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_below="@id/calculateButton"
+                android:text="Electricity cost per day:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextElectricityPerDay"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/electricityPerDayLabel"
+                android:layout_below="@id/calculateButton"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/border"/>
+
+            <TextView
+                android:id="@+id/electricityPerMonthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_below="@id/electricityPerDayLabel"
+                android:text="Electricity cost per month:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextElectricityPerMonth"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/electricityPerDayLabel"
+                android:layout_below="@id/editTextElectricityPerDay"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/border"/>
+
+            <TextView
+                android:id="@+id/electricityPerYearLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_below="@id/electricityPerMonthLabel"
+                android:text="Electricity cost per year:"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextElectricityPerYear"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/electricityPerMonthLabel"
+                android:layout_below="@id/editTextElectricityPerMonth"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/border"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
