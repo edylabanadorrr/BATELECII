@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Monthly Consumption Graph"
+        android:text="Monthly Consumption Graph (kWh)"
         android:fontFamily="@font/poppinsbold"
         android:textAlignment="center"/>
 

@@ -305,6 +305,7 @@ public class BillActivity extends AppCompatActivity {
 
         // Consumption Graph
 
+
         Button consumptionGraphButton = findViewById(R.id.consumptionGraph);
         consumptionGraphButton.setOnClickListener(new View.OnClickListener() {
             @Override

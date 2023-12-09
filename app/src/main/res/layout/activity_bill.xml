@@ -65,21 +65,11 @@
 
         </TextView>
 
-        <TextView
-            android:id="@+id/textViewPleasePay"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Please pay your bills before January 05, 2024"
-            android:layout_below="@id/myBillHead"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            android:layout_marginStart="5dp"/>
-
         <RelativeLayout
             android:id="@+id/relativeLayoutBill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textViewPleasePay"
+            android:layout_below="@id/myBillHead"
             android:padding="20dp">
 
             <TextView
@@ -94,6 +84,53 @@
                 android:fontFamily="@font/poppinsmedium">
 
             </TextView>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="30dp"
+                android:background="@drawable/hourglass_start"
+                android:layout_below="@id/myBill"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/myDueDateHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Due Date:"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:layout_marginStart="15dp"
+                android:textAlignment="center"
+                android:layout_below="@id/myBill"
+                android:fontFamily="@font/poppinsbold"/>
+
+            <TextView
+                android:id="@+id/dueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="January 05, 2024"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/myDueDateHead"
+                android:background="@drawable/bill_amount"
+                android:fontFamily="@font/poppinsbold"/>
+
+            <TextView
+                android:id="@+id/dueDateNotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please pay before the due date to avoid disconnection"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/dueDate"
+                android:background="@drawable/due_date_notice"/>
 
         </RelativeLayout>
 
