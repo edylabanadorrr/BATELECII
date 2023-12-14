@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,15 +8,51 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bill History"
+        android:text="Bill History (Php)"
         android:fontFamily="@font/poppinsbold"
         android:textAlignment="center"/>
 
     <lecho.lib.hellocharts.view.ColumnChartView
         android:id="@+id/barGraph"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="250dp"/>
 
+    <ImageView
+        android:id="@+id/blue"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/barGraph"
+        android:src="@drawable/blue"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barGraph"
+        android:layout_toEndOf="@id/blue"
+        android:text="Below Php 500.00"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="8dp"/>
+
+    <ImageView
+        android:id="@+id/red"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/blue"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/red"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blue"
+        android:layout_toEndOf="@id/red"
+        android:text="Above Php 500.00"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"/>
+
+
+</RelativeLayout>

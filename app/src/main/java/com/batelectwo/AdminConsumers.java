@@ -49,7 +49,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public class AdminConsumers extends AppCompatActivity {
 
@@ -654,7 +653,7 @@ public class AdminConsumers extends AppCompatActivity {
             long lastUpdateTimeMillis = sharedPreferences.getLong(consumerKey, 0);
             long currentTimeMillis = System.currentTimeMillis();
 
-            if (currentTimeMillis - lastUpdateTimeMillis < MIN_TIME_INTERVAL) {
+            /* (if (currentTimeMillis - lastUpdateTimeMillis < MIN_TIME_INTERVAL) {
                 // Calculate the remaining time in hours and minutes
                 long timeDifferenceMillis = MIN_TIME_INTERVAL - (currentTimeMillis - lastUpdateTimeMillis);
                 long hours = TimeUnit.MILLISECONDS.toHours(timeDifferenceMillis);
@@ -666,7 +665,7 @@ public class AdminConsumers extends AppCompatActivity {
                 Log.d(TAG, "Time restriction not met for " + consumerKey);
                 Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
                 return;
-            }
+            }) */
 
 
             // After a successful update, update the last update time for this consumer
@@ -758,7 +757,27 @@ public class AdminConsumers extends AppCompatActivity {
             // Extract month and year from the timestamp
             String[] parts = formattedTimestamp.split(" ");
             String[] dateParts = parts[0].split("/");
-            String monthYear = dateParts[0] + "_" + dateParts[2]; // Format: MM_YYYY
+            int monthNumber = Integer.parseInt(dateParts[0]);
+
+            // Convert month number to month name
+            String monthName;
+            switch (monthNumber) {
+                case 1: monthName = "Jan"; break;
+                case 2: monthName = "Feb"; break;
+                case 3: monthName = "Mar"; break;
+                case 4: monthName = "Apr"; break;
+                case 5: monthName = "May"; break;
+                case 6: monthName = "June"; break;
+                case 7: monthName = "July"; break;
+                case 8: monthName = "Aug"; break;
+                case 9: monthName = "Sept"; break;
+                case 10: monthName = "Oct"; break;
+                case 11: monthName = "Nov"; break;
+                case 12: monthName = "Dec"; break;
+                default: monthName = "Unknown";
+            }
+
+            String monthYear = monthName + "_" + dateParts[2]; // Format: Month_YYYY //
 
             // Update the consumer's details in Firebase
             DatabaseReference consumerRef = FirebaseDatabase.getInstance().getReference("Registered Users")
