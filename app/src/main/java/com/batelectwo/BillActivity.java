@@ -582,7 +582,7 @@ public class BillActivity extends AppCompatActivity {
         // Example code to return a hardcoded date:
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         try {
-            return sdf.parse("2024-01-05"); // Change this to your actual deadline date
+            return sdf.parse("2028-12-05"); // Change this to your actual deadline date
         } catch (ParseException e) {
             e.printStackTrace();
             return null; // Return null if parsing fails

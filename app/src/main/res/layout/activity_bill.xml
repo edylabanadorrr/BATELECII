@@ -111,7 +111,7 @@
                 android:id="@+id/dueDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="January 05, 2024"
+                android:text="December 05, 2024"
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:textSize="20dp"
