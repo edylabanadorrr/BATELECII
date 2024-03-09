@@ -49,6 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class AdminConsumers extends AppCompatActivity {
 
@@ -653,7 +654,7 @@ public class AdminConsumers extends AppCompatActivity {
             long lastUpdateTimeMillis = sharedPreferences.getLong(consumerKey, 0);
             long currentTimeMillis = System.currentTimeMillis();
 
-            /* (if (currentTimeMillis - lastUpdateTimeMillis < MIN_TIME_INTERVAL) {
+            if (currentTimeMillis - lastUpdateTimeMillis < MIN_TIME_INTERVAL) {
                 // Calculate the remaining time in hours and minutes
                 long timeDifferenceMillis = MIN_TIME_INTERVAL - (currentTimeMillis - lastUpdateTimeMillis);
                 long hours = TimeUnit.MILLISECONDS.toHours(timeDifferenceMillis);
@@ -665,7 +666,7 @@ public class AdminConsumers extends AppCompatActivity {
                 Log.d(TAG, "Time restriction not met for " + consumerKey);
                 Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
                 return;
-            }) */
+            }
 
 
             // After a successful update, update the last update time for this consumer
